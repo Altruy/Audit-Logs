@@ -1,0 +1,161 @@
+-------
+
+07/15/21 08:20:01
+● auditd.service - Security Auditing Service
+   Loaded: loaded (/lib/systemd/system/auditd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2021-07-15 08:14:55 UTC; 5min ago
+     Docs: man:auditd(8)
+           https://people.redhat.com/sgrubb/audit/
+  Process: 143 ExecStartPost=/sbin/augenrules --load (code=exited, status=0/SUCCESS)
+ Main PID: 142 (auditd)
+   CGroup: /system.slice/auditd.service
+           └─142 /sbin/auditd -n
+
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 60000
+Jul 15 08:14:55 syzkaller augenrules[143]: enabled 1
+Jul 15 08:14:55 syzkaller augenrules[143]: failure 1
+Jul 15 08:14:55 syzkaller augenrules[143]: pid 142
+Jul 15 08:14:55 syzkaller augenrules[143]: rate_limit 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_limit 8192
+Jul 15 08:14:55 syzkaller augenrules[143]: lost 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog 3
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 0
+Jul 15 08:14:55 syzkaller systemd[1]: Started Security Auditing Service.
+-------
+
+07/17/21 06:00:01
+● auditd.service - Security Auditing Service
+   Loaded: loaded (/lib/systemd/system/auditd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2021-07-15 08:14:55 UTC; 1 day 21h ago
+     Docs: man:auditd(8)
+           https://people.redhat.com/sgrubb/audit/
+  Process: 143 ExecStartPost=/sbin/augenrules --load (code=exited, status=0/SUCCESS)
+ Main PID: 142 (auditd)
+   CGroup: /system.slice/auditd.service
+           └─142 /sbin/auditd -n
+
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 60000
+Jul 15 08:14:55 syzkaller augenrules[143]: enabled 1
+Jul 15 08:14:55 syzkaller augenrules[143]: failure 1
+Jul 15 08:14:55 syzkaller augenrules[143]: pid 142
+Jul 15 08:14:55 syzkaller augenrules[143]: rate_limit 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_limit 8192
+Jul 15 08:14:55 syzkaller augenrules[143]: lost 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog 3
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 0
+Jul 15 08:14:55 syzkaller systemd[1]: Started Security Auditing Service.
+-------
+
+07/17/21 06:10:01
+● auditd.service - Security Auditing Service
+   Loaded: loaded (/lib/systemd/system/auditd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2021-07-15 08:14:55 UTC; 1 day 21h ago
+     Docs: man:auditd(8)
+           https://people.redhat.com/sgrubb/audit/
+  Process: 143 ExecStartPost=/sbin/augenrules --load (code=exited, status=0/SUCCESS)
+ Main PID: 142 (auditd)
+   CGroup: /system.slice/auditd.service
+           └─142 /sbin/auditd -n
+
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 60000
+Jul 15 08:14:55 syzkaller augenrules[143]: enabled 1
+Jul 15 08:14:55 syzkaller augenrules[143]: failure 1
+Jul 15 08:14:55 syzkaller augenrules[143]: pid 142
+Jul 15 08:14:55 syzkaller augenrules[143]: rate_limit 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_limit 8192
+Jul 15 08:14:55 syzkaller augenrules[143]: lost 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog 3
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 0
+Jul 15 08:14:55 syzkaller systemd[1]: Started Security Auditing Service.
+-------
+
+07/19/21 03:50:01
+● auditd.service - Security Auditing Service
+   Loaded: loaded (/lib/systemd/system/auditd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2021-07-15 08:14:55 UTC; 3 days ago
+     Docs: man:auditd(8)
+           https://people.redhat.com/sgrubb/audit/
+  Process: 143 ExecStartPost=/sbin/augenrules --load (code=exited, status=0/SUCCESS)
+ Main PID: 142 (auditd)
+   CGroup: /system.slice/auditd.service
+           └─142 /sbin/auditd -n
+
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 60000
+Jul 15 08:14:55 syzkaller augenrules[143]: enabled 1
+Jul 15 08:14:55 syzkaller augenrules[143]: failure 1
+Jul 15 08:14:55 syzkaller augenrules[143]: pid 142
+Jul 15 08:14:55 syzkaller augenrules[143]: rate_limit 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_limit 8192
+Jul 15 08:14:55 syzkaller augenrules[143]: lost 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog 3
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 0
+Jul 15 08:14:55 syzkaller systemd[1]: Started Security Auditing Service.
+-------
+
+07/19/21 04:00:01
+● auditd.service - Security Auditing Service
+   Loaded: loaded (/lib/systemd/system/auditd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2021-07-15 08:14:55 UTC; 3 days ago
+     Docs: man:auditd(8)
+           https://people.redhat.com/sgrubb/audit/
+  Process: 143 ExecStartPost=/sbin/augenrules --load (code=exited, status=0/SUCCESS)
+ Main PID: 142 (auditd)
+   CGroup: /system.slice/auditd.service
+           └─142 /sbin/auditd -n
+
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 60000
+Jul 15 08:14:55 syzkaller augenrules[143]: enabled 1
+Jul 15 08:14:55 syzkaller augenrules[143]: failure 1
+Jul 15 08:14:55 syzkaller augenrules[143]: pid 142
+Jul 15 08:14:55 syzkaller augenrules[143]: rate_limit 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_limit 8192
+Jul 15 08:14:55 syzkaller augenrules[143]: lost 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog 3
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 0
+Jul 15 08:14:55 syzkaller systemd[1]: Started Security Auditing Service.
+-------
+
+07/21/21 01:40:01
+● auditd.service - Security Auditing Service
+   Loaded: loaded (/lib/systemd/system/auditd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2021-07-15 08:14:55 UTC; 5 days ago
+     Docs: man:auditd(8)
+           https://people.redhat.com/sgrubb/audit/
+  Process: 143 ExecStartPost=/sbin/augenrules --load (code=exited, status=0/SUCCESS)
+ Main PID: 142 (auditd)
+   CGroup: /system.slice/auditd.service
+           └─142 /sbin/auditd -n
+
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 60000
+Jul 15 08:14:55 syzkaller augenrules[143]: enabled 1
+Jul 15 08:14:55 syzkaller augenrules[143]: failure 1
+Jul 15 08:14:55 syzkaller augenrules[143]: pid 142
+Jul 15 08:14:55 syzkaller augenrules[143]: rate_limit 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_limit 8192
+Jul 15 08:14:55 syzkaller augenrules[143]: lost 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog 3
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 0
+Jul 15 08:14:55 syzkaller systemd[1]: Started Security Auditing Service.
+-------
+
+07/21/21 20:00:01
+● auditd.service - Security Auditing Service
+   Loaded: loaded (/lib/systemd/system/auditd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2021-07-15 08:14:55 UTC; 6 days ago
+     Docs: man:auditd(8)
+           https://people.redhat.com/sgrubb/audit/
+  Process: 143 ExecStartPost=/sbin/augenrules --load (code=exited, status=0/SUCCESS)
+ Main PID: 142 (auditd)
+   CGroup: /system.slice/auditd.service
+           └─142 /sbin/auditd -n
+
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 60000
+Jul 15 08:14:55 syzkaller augenrules[143]: enabled 1
+Jul 15 08:14:55 syzkaller augenrules[143]: failure 1
+Jul 15 08:14:55 syzkaller augenrules[143]: pid 142
+Jul 15 08:14:55 syzkaller augenrules[143]: rate_limit 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_limit 8192
+Jul 15 08:14:55 syzkaller augenrules[143]: lost 0
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog 3
+Jul 15 08:14:55 syzkaller augenrules[143]: backlog_wait_time 0
+Jul 15 08:14:55 syzkaller systemd[1]: Started Security Auditing Service.

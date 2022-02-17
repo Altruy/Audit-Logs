@@ -1,0 +1,9 @@
+[Unit]
+Description=Ftrace syscalls
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/myscript
+
+[Install]
+WantedBy=multi-user.target

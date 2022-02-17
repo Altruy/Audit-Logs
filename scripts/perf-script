@@ -1,0 +1,6 @@
+#!/bin/bash
+TIM=$(date +"%H:%M:%S")
+perf record -a -e syscalls:sys_enter* --exclude-perf -o ~/trace_$TIM -- sleep 60 
+
+perf script -i ~/trace_$TIM | grep syz  > outs_$TIM
+

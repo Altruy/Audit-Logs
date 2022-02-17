@@ -1,0 +1,6 @@
+[Unit]
+Description=dumps ftrace
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/timescript

@@ -1,0 +1,1470 @@
+-------
+
+07/15/21 08:20:01
+[    0.000000] Linux version 5.13.0+ (altruy@bamboozler) (gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0, GNU ld (GNU Binutils for Ubuntu) 2.34) #1 SMP Fri Jul 2 14:53:49 PKT 2021
+[    0.000000] Command line: root=/dev/sda console=ttyS0 net.ifnames=0
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x008: 'MPX bounds registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x010: 'MPX CSR'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: xstate_offset[3]:  832, xstate_sizes[3]:   64
+[    0.000000] x86/fpu: xstate_offset[4]:  896, xstate_sizes[4]:   64
+[    0.000000] x86/fpu: Enabled xstate features 0x1f, context size is 960 bytes, using 'compacted' format.
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffdffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007ffe0000-0x000000007fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.8 present.
+[    0.000000] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.13.0-1ubuntu1.1 04/01/2014
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: cpu 0, msr 5b06b001, primary cpu clock
+[    0.000003] kvm-clock: using sched offset of 532546107 cycles
+[    0.000018] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000037] tsc: Detected 2399.998 MHz processor
+[    0.004406] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.004427] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.004443] last_pfn = 0x7ffe0 max_arch_pfn = 0x400000000
+[    0.004502] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.017950] found SMP MP-table at [mem 0x000f5c80-0x000f5c8f]
+[    0.018050] Using GB pages for direct mapping
+[    0.018676] ACPI: Early table checksum verification disabled
+[    0.018702] ACPI: RSDP 0x00000000000F5A70 000014 (v00 BOCHS )
+[    0.018725] ACPI: RSDT 0x000000007FFE15C9 000030 (v01 BOCHS  BXPCRSDT 00000001 BXPC 00000001)
+[    0.018755] ACPI: FACP 0x000000007FFE149D 000074 (v01 BOCHS  BXPCFACP 00000001 BXPC 00000001)
+[    0.018784] ACPI: DSDT 0x000000007FFE0040 00145D (v01 BOCHS  BXPCDSDT 00000001 BXPC 00000001)
+[    0.018810] ACPI: FACS 0x000000007FFE0000 000040
+[    0.018828] ACPI: APIC 0x000000007FFE1511 000080 (v01 BOCHS  BXPCAPIC 00000001 BXPC 00000001)
+[    0.018848] ACPI: HPET 0x000000007FFE1591 000038 (v01 BOCHS  BXPCHPET 00000001 BXPC 00000001)
+[    0.018866] ACPI: Reserving FACP table memory at [mem 0x7ffe149d-0x7ffe1510]
+[    0.018875] ACPI: Reserving DSDT table memory at [mem 0x7ffe0040-0x7ffe149c]
+[    0.018883] ACPI: Reserving FACS table memory at [mem 0x7ffe0000-0x7ffe003f]
+[    0.018890] ACPI: Reserving APIC table memory at [mem 0x7ffe1511-0x7ffe1590]
+[    0.018897] ACPI: Reserving HPET table memory at [mem 0x7ffe1591-0x7ffe15c8]
+[    0.020033] No NUMA configuration found
+[    0.020042] Faking a node at [mem 0x0000000000000000-0x000000007ffdffff]
+[    0.020062] NODE_DATA(0) allocated [mem 0x7ffdc000-0x7ffdffff]
+[    0.020114] Zone ranges:
+[    0.020119]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.020129]   DMA32    [mem 0x0000000001000000-0x000000007ffdffff]
+[    0.020139]   Normal   empty
+[    0.020145] Movable zone start for each node
+[    0.020150] Early memory node ranges
+[    0.020154]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.020163]   node   0: [mem 0x0000000000100000-0x000000007ffdffff]
+[    0.020172] Initmem setup node 0 [mem 0x0000000000001000-0x000000007ffdffff]
+[    0.020412] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.020533] On node 0, zone DMA: 97 pages in unavailable ranges
+[    0.040029] On node 0, zone DMA32: 32 pages in unavailable ranges
+[    0.097283] kasan: KernelAddressSanitizer initialized
+[    0.097795] ACPI: PM-Timer IO Port: 0x608
+[    0.097819] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.097897] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+[    0.097913] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.097922] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[    0.097930] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.097941] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[    0.097948] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[    0.097965] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.097971] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.097983] TSC deadline timer available
+[    0.097993] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+[    0.098023] kvm-guest: KVM setup pv remote TLB flush
+[    0.098031] kvm-guest: setup PV sched yield
+[    0.098068] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.098078] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.098084] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.098090] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.098098] [mem 0x80000000-0xfeffbfff] available for PCI devices
+[    0.098105] Booting paravirtualized kernel on KVM
+[    0.098119] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.120535] setup_percpu: NR_CPUS:64 nr_cpumask_bits:64 nr_cpu_ids:2 nr_node_ids:1
+[    0.121051] percpu: Embedded 60 pages/cpu s207832 r8192 d29736 u1048576
+[    0.121080] pcpu-alloc: s207832 r8192 d29736 u1048576 alloc=1*2097152
+[    0.121091] pcpu-alloc: [0] 0 1 
+[    0.121177] kvm-guest: setup async PF for cpu 0
+[    0.121188] kvm-guest: stealtime: cpu 0, msr 6d21f140
+[    0.121205] Built 1 zonelists, mobility grouping on.  Total pages: 515808
+[    0.121212] Policy zone: DMA32
+[    0.121218] Kernel command line: root=/dev/sda console=ttyS0 net.ifnames=0
+[    0.121742] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.121922] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.122043] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.169604] Memory: 1706364K/2096632K available (43023K kernel code, 7385K rwdata, 6888K rodata, 2016K init, 1760K bss, 390012K reserved, 0K cma-reserved)
+[    0.169896] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.169933] Kernel/User page tables isolation: enabled
+[    0.170276] rcu: Hierarchical RCU implementation.
+[    0.170282] rcu: 	RCU event tracing is enabled.
+[    0.170286] rcu: 	RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=2.
+[    0.170294] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.170299] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[    0.182807] NR_IRQS: 4352, nr_irqs: 440, preallocated irqs: 16
+[    0.183368] random: get_random_bytes called from start_kernel+0x1f7/0x3e7 with crng_init=0
+[    0.191640] Console: colour VGA+ 80x25
+[    0.315959] printk: console [ttyS0] enabled
+[    0.316805] ACPI: Core revision 20210604
+[    0.317911] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+[    0.319543] APIC: Switch to symmetric I/O mode setup
+[    0.320363] kvm-guest: setup PV IPIs
+[    0.322693] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.323748] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x229835b7123, max_idle_ns: 440795242976 ns
+[    0.325469] Calibrating delay loop (skipped) preset value.. 4799.99 BogoMIPS (lpj=2399998)
+[    0.326468] pid_max: default: 32768 minimum: 301
+[    0.327569] LSM: Security Framework initializing
+[    0.328516] SELinux:  Initializing.
+[    0.329223] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.329470] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.331940] x86/cpu: User Mode Instruction Prevention (UMIP) activated
+[    0.332603] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.333464] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.334476] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.335475] Spectre V2 : Mitigation: Full generic retpoline
+[    0.336391] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.336465] Spectre V2 : Enabling Restricted Speculation for firmware calls
+[    0.337474] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    0.338468] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+[    0.339476] SRBDS: Unknown: Dependent on hypervisor status
+[    0.340465] MDS: Mitigation: Clear CPU buffers
+[    0.355199] Freeing SMP alternatives memory: 40K
+[    0.356575] smpboot: CPU0: Intel(R) Core(TM) i3-7100U CPU @ 2.40GHz (family: 0x6, model: 0x8e, stepping: 0x9)
+[    0.357798] Performance Events: Skylake events, full-width counters, Intel PMU driver.
+[    0.358486] ... version:                2
+[    0.359392] ... bit width:              48
+[    0.359466] ... generic registers:      4
+[    0.360187] ... value mask:             0000ffffffffffff
+[    0.360468] ... max period:             00007fffffffffff
+[    0.361468] ... fixed-purpose events:   3
+[    0.362370] ... event mask:             000000070000000f
+[    0.362779] rcu: Hierarchical SRCU implementation.
+[    0.364860] smp: Bringing up secondary CPUs ...
+[    0.365777] x86: Booting SMP configuration:
+[    0.366468] .... node  #0, CPUs:      #1
+[    0.140348] kvm-clock: cpu 1, msr 5b06b041, secondary cpu clock
+[    0.140348] smpboot: CPU 1 Converting physical 0 to logical die 1
+[    0.370505] kvm-guest: setup async PF for cpu 1
+[    0.371316] kvm-guest: stealtime: cpu 1, msr 6d31f140
+[    0.371521] smp: Brought up 1 node, 2 CPUs
+[    0.372474] smpboot: Max logical packages: 2
+[    0.373189] smpboot: Total of 2 processors activated (9599.99 BogoMIPS)
+[    0.374040] devtmpfs: initialized
+[    0.378712] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.379470] futex hash table entries: 512 (order: 3, 32768 bytes, linear)
+[    0.380794] PM: RTC time: 08:14:47, date: 2021-07-15
+[    0.381924] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.383244] audit: initializing netlink subsys (disabled)
+[    0.383564] audit: type=2000 audit(1626336888.195:1): state=initialized audit_enabled=0 res=1
+[    0.385108] thermal_sys: Registered thermal governor 'step_wise'
+[    0.385118] thermal_sys: Registered thermal governor 'user_space'
+[    0.385600] cpuidle: using governor menu
+[    0.387427] ACPI: bus type PCI registered
+[    0.387908] PCI: Using configuration type 1 for base access
+[    0.413709] Kprobes globally optimized
+[    0.415478] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.416656] cryptomgr_test (26) used greatest stack depth: 30560 bytes left
+[    0.418138] cryptomgr_test (28) used greatest stack depth: 30504 bytes left
+[    0.421787] ACPI: PRMT not present
+[    0.422470] PRM: found 4294967277 modules
+[    0.423926] ACPI: Added _OSI(Module Device)
+[    0.424519] ACPI: Added _OSI(Processor Device)
+[    0.425469] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.426475] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.427489] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.428499] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.429489] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.463073] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.469132] ACPI: Interpreter enabled
+[    0.469603] ACPI: PM: (supports S0 S3 S4 S5)
+[    0.470436] ACPI: Using IOAPIC for interrupt routing
+[    0.470561] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.472956] ACPI: Enabled 2 GPEs in block 00 to 0F
+[    0.528135] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.528508] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+[    0.529784] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.531097] PCI host bridge to bus 0000:00
+[    0.531485] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.532490] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.533479] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.534800] pci_bus 0000:00: root bus resource [mem 0x80000000-0xfebfffff window]
+[    0.535495] pci_bus 0000:00: root bus resource [mem 0x100000000-0x17fffffff window]
+[    0.536485] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.537564] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    0.541052] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[    0.544199] pci 0000:00:01.1: [8086:7010] type 00 class 0x010180
+[    0.546469] pci 0000:00:01.1: reg 0x20: [io  0xc060-0xc06f]
+[    0.548503] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.549474] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.550470] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.551470] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.554100] pci 0000:00:01.3: [8086:7113] type 00 class 0x068000
+[    0.555072] pci 0000:00:01.3: quirk: [io  0x0600-0x063f] claimed by PIIX4 ACPI
+[    0.555484] pci 0000:00:01.3: quirk: [io  0x0700-0x070f] claimed by PIIX4 SMB
+[    0.558846] pci 0000:00:02.0: [1234:1111] type 00 class 0x030000
+[    0.560968] pci 0000:00:02.0: reg 0x10: [mem 0xfd000000-0xfdffffff pref]
+[    0.562923] pci 0000:00:02.0: reg 0x18: [mem 0xfebb0000-0xfebb0fff]
+[    0.566526] pci 0000:00:02.0: reg 0x30: [mem 0xfeba0000-0xfebaffff pref]
+[    0.570167] pci 0000:00:03.0: [1af4:1005] type 00 class 0x00ff00
+[    0.571412] pci 0000:00:03.0: reg 0x10: [io  0xc040-0xc05f]
+[    0.573468] pci 0000:00:03.0: reg 0x20: [mem 0xfe000000-0xfe003fff 64bit pref]
+[    0.577765] pci 0000:00:04.0: [8086:100e] type 00 class 0x020000
+[    0.579233] pci 0000:00:04.0: reg 0x10: [mem 0xfeb80000-0xfeb9ffff]
+[    0.580178] pci 0000:00:04.0: reg 0x14: [io  0xc000-0xc03f]
+[    0.583992] pci 0000:00:04.0: reg 0x30: [mem 0xfeb00000-0xfeb7ffff pref]
+[    0.593280] ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+[    0.595235] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+[    0.597276] ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+[    0.599239] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+[    0.600055] ACPI: PCI: Interrupt link LNKS configured for IRQ 9
+[    0.602916] iommu: Default domain type: Translated 
+[    0.603660] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.604460] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.604482] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.605472] vgaarb: loaded
+[    0.606985] SCSI subsystem initialized
+[    0.607638] libata version 3.00 loaded.
+[    0.608209] ACPI: bus type USB registered
+[    0.608645] usbcore: registered new interface driver usbfs
+[    0.609553] usbcore: registered new interface driver hub
+[    0.610466] usbcore: registered new device driver usb
+[    0.611441] pps_core: LinuxPPS API ver. 1 registered
+[    0.611467] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.612502] PTP clock support registered
+[    0.613599] Advanced Linux Sound Architecture Driver Initialized.
+[    0.615634] NetLabel: Initializing
+[    0.616205] NetLabel:  domain hash size = 128
+[    0.616467] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.617676] NetLabel:  unlabeled traffic allowed by default
+[    0.618604] PCI: Using ACPI for IRQ routing
+[    0.619476] PCI: pci_cache_line_size set to 64 bytes
+[    0.619639] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[    0.619681] e820: reserve RAM buffer [mem 0x7ffe0000-0x7fffffff]
+[    0.619844] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    0.620466] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+[    0.624620] clocksource: Switched to clocksource kvm-clock
+[    1.006022] VFS: Disk quotas dquot_6.6.0
+[    1.007081] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.008944] pnp: PnP ACPI init
+[    1.010810] pnp 00:03: [dma 2]
+[    1.015317] pnp: PnP ACPI: found 6 devices
+[    1.030585] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.032316] NET: Registered PF_INET protocol family
+[    1.033313] IP idents hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    1.035611] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes, linear)
+[    1.037165] TCP established hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    1.038901] TCP bind hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[    1.040381] TCP: Hash tables configured (established 16384 bind 16384)
+[    1.041902] UDP hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    1.043365] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    1.045166] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    1.046927] RPC: Registered named UNIX socket transport module.
+[    1.048231] RPC: Registered udp transport module.
+[    1.049253] RPC: Registered tcp transport module.
+[    1.050280] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.052546] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    1.053893] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    1.055233] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    1.056728] pci_bus 0000:00: resource 7 [mem 0x80000000-0xfebfffff window]
+[    1.058217] pci_bus 0000:00: resource 8 [mem 0x100000000-0x17fffffff window]
+[    1.060305] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    1.062093] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    1.063254] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    1.064689] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    1.066623] PCI: CLS 0 bytes, default 64
+[    1.731962] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+[    1.733830] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x229835b7123, max_idle_ns: 440795242976 ns
+[    1.736247] clocksource: Switched to clocksource tsc
+[    1.741032] Initialise system trusted keyrings
+[    1.742012] workingset: timestamp_bits=56 max_order=19 bucket_order=0
+[    1.767446] NFS: Registering the id_resolver key type
+[    1.768543] Key type id_resolver registered
+[    1.769222] Key type id_legacy registered
+[    1.770179] 9p: Installing v9fs 9p2000 file system support
+[    1.784299] Key type asymmetric registered
+[    1.785117] Asymmetric key parser 'x509' registered
+[    1.786076] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+[    1.787445] io scheduler mq-deadline registered
+[    1.788646] io scheduler kyber registered
+[    1.790689] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    1.792233] ACPI: button: Power Button [PWRF]
+[    3.441664] ACPI: \_SB_.LNKC: Enabled at IRQ 11
+[    3.444182] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    3.445557] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    3.448989] Non-volatile memory driver v1.3
+[    3.449900] Linux agpgart interface v0.103
+[    3.465447] loop: module loaded
+[    3.466935] ata_piix 0000:00:01.1: version 2.13
+[    3.469821] scsi host0: ata_piix
+[    3.471424] scsi host1: ata_piix
+[    3.472384] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc060 irq 14
+[    3.473583] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc068 irq 15
+[    3.475880] libphy: Fixed MDIO Bus: probed
+[    3.477492] e100: Intel(R) PRO/100 Network Driver
+[    3.478520] e100: Copyright(c) 1999-2006 Intel Corporation
+[    3.479764] e1000: Intel(R) PRO/1000 Network Driver
+[    3.480661] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    3.634001] ata1.01: NODEV after polling detection
+[    3.634341] ata1.00: ATA-7: QEMU HARDDISK, 2.5+, max UDMA/100
+[    3.635368] ata1.00: 4194304 sectors, multi 16: LBA48 
+[    3.637065] ata2.01: NODEV after polling detection
+[    3.637378] ata2.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
+[    3.639188] scsi 0:0:0:0: Direct-Access     ATA      QEMU HARDDISK    2.5+ PQ: 0 ANSI: 5
+[    3.641697] scsi 0:0:0:0: Attached scsi generic sg0 type 0
+[    3.643779] sd 0:0:0:0: [sda] 4194304 512-byte logical blocks: (2.15 GB/2.00 GiB)
+[    3.644393] scsi 1:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
+[    3.645230] sd 0:0:0:0: [sda] Write Protect is off
+[    3.647974] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    3.648198] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    3.652923] sd 0:0:0:0: [sda] Attached SCSI disk
+[    3.664242] sr 1:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+[    3.665744] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    3.683976] sr 1:0:0:0: Attached scsi CD-ROM sr0
+[    3.684482] sr 1:0:0:0: Attached scsi generic sg1 type 5
+[    5.076134] ACPI: \_SB_.LNKD: Enabled at IRQ 10
+[    5.400575] e1000 0000:00:04.0 eth0: (PCI:33MHz:32-bit) 52:54:00:12:34:56
+[    5.402076] e1000 0000:00:04.0 eth0: Intel(R) PRO/1000 Network Connection
+[    5.403686] e1000e: Intel(R) PRO/1000 Network Driver
+[    5.404777] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    5.406145] sky2: driver version 1.30
+[    5.407639] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    5.409069] ehci-pci: EHCI PCI platform driver
+[    5.410115] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    5.411475] ohci-pci: OHCI PCI platform driver
+[    5.412515] uhci_hcd: USB Universal Host Controller Interface driver
+[    5.414229] usbcore: registered new interface driver usblp
+[    5.415502] usbcore: registered new interface driver usb-storage
+[    5.416982] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    5.419727] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    5.420831] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    5.423278] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+[    5.423921] rtc_cmos 00:00: RTC can wake from S4
+[    5.429280] rtc_cmos 00:00: registered as rtc0
+[    5.430473] rtc_cmos 00:00: alarms up to one day, y3k, 114 bytes nvram, hpet irqs
+[    5.433347] device-mapper: ioctl: 4.45.0-ioctl (2021-03-22) initialised: dm-devel@redhat.com
+[    5.434830] intel_pstate: CPU model not supported
+[    5.435814] hid: raw HID events driver (C) Jiri Kosina
+[    5.437779] usbcore: registered new interface driver usbhid
+[    5.438813] usbhid: USB HID core driver
+[    5.441366] Initializing XFRM netlink socket
+[    5.443192] NET: Registered PF_INET6 protocol family
+[    5.445616] Segment Routing with IPv6
+[    5.446805] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    5.448636] NET: Registered PF_PACKET protocol family
+[    5.449697] 9pnet: Installing 9P2000 support
+[    5.450449] Key type dns_resolver registered
+[    5.451852] IPI shorthand broadcast: enabled
+[    5.452664] sched_clock: Marking stable (5313218888, 139348464)->(5538684188, -86116836)
+[    5.454248] registered taskstats version 1
+[    5.454934] Loading compiled-in X.509 certificates
+[    5.458189] PM:   Magic number: 13:148:220
+[    5.458978] dmi id: hash matches
+[    5.459548] printk: console [netcon0] enabled
+[    5.460267] netconsole: network logging started
+[    5.461566] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    5.463315] kworker/u4:2 (70) used greatest stack depth: 28712 bytes left
+[    5.465761] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    5.466965] ALSA device list:
+[    5.467525]   No soundcards found.
+[    5.468752] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    5.470278] cfg80211: failed to load regulatory.db
+[    6.056723] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[    6.062704] md: Waiting for all devices to be available before autodetect
+[    6.066372] md: If you don't use raid, use raid=noautodetect
+[    6.069442] md: Autodetecting RAID arrays.
+[    6.071657] md: autorun ...
+[    6.073227] md: ... autorun DONE.
+[    6.084738] EXT4-fs (sda): INFO: recovery required on readonly filesystem
+[    6.087681] EXT4-fs (sda): write access will be enabled during recovery
+[    6.134199] EXT4-fs (sda): recovery complete
+[    6.138145] EXT4-fs (sda): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+[    6.139826] VFS: Mounted root (ext4 filesystem) readonly on device 8:0.
+[    6.141545] devtmpfs: mounted
+[    6.143180] Freeing unused kernel image (initmem) memory: 2016K
+[    6.144374] Write protecting the kernel read-only data: 53248k
+[    6.147313] Freeing unused kernel image (text/rodata gap) memory: 2032K
+[    6.149071] Freeing unused kernel image (rodata/data gap) memory: 1304K
+[    6.150324] Run /sbin/init as init process
+[    6.151050]   with arguments:
+[    6.151056]     /sbin/init
+[    6.151061]   with environment:
+[    6.151066]     HOME=/
+[    6.151070]     TERM=linux
+[    6.158327] random: fast init done
+[    6.678037] SELinux:  Permission getrlimit in class process not defined in policy.
+[    6.679366] SELinux:  Class process2 not defined in policy.
+[    6.680300] SELinux:  Permission watch in class filesystem not defined in policy.
+[    6.681474] SELinux:  Permission map in class file not defined in policy.
+[    6.682538] SELinux:  Permission watch in class file not defined in policy.
+[    6.683738] SELinux:  Permission watch_mount in class file not defined in policy.
+[    6.685023] SELinux:  Permission watch_sb in class file not defined in policy.
+[    6.686307] SELinux:  Permission watch_with_perm in class file not defined in policy.
+[    6.687646] SELinux:  Permission watch_reads in class file not defined in policy.
+[    6.688947] SELinux:  Permission map in class dir not defined in policy.
+[    6.690220] SELinux:  Permission watch in class dir not defined in policy.
+[    6.691695] SELinux:  Permission watch_mount in class dir not defined in policy.
+[    6.693278] SELinux:  Permission watch_sb in class dir not defined in policy.
+[    6.694796] SELinux:  Permission watch_with_perm in class dir not defined in policy.
+[    6.696443] SELinux:  Permission watch_reads in class dir not defined in policy.
+[    6.698025] SELinux:  Permission map in class lnk_file not defined in policy.
+[    6.699544] SELinux:  Permission watch in class lnk_file not defined in policy.
+[    6.701108] SELinux:  Permission watch_mount in class lnk_file not defined in policy.
+[    6.702775] SELinux:  Permission watch_sb in class lnk_file not defined in policy.
+[    6.704387] SELinux:  Permission watch_with_perm in class lnk_file not defined in policy.
+[    6.706216] SELinux:  Permission watch_reads in class lnk_file not defined in policy.
+[    6.707881] SELinux:  Permission map in class chr_file not defined in policy.
+[    6.709405] SELinux:  Permission watch in class chr_file not defined in policy.
+[    6.710963] SELinux:  Permission watch_mount in class chr_file not defined in policy.
+[    6.712631] SELinux:  Permission watch_sb in class chr_file not defined in policy.
+[    6.714237] SELinux:  Permission watch_with_perm in class chr_file not defined in policy.
+[    6.715964] SELinux:  Permission watch_reads in class chr_file not defined in policy.
+[    6.717637] SELinux:  Permission map in class blk_file not defined in policy.
+[    6.719161] SELinux:  Permission watch in class blk_file not defined in policy.
+[    6.720719] SELinux:  Permission watch_mount in class blk_file not defined in policy.
+[    6.722473] SELinux:  Permission watch_sb in class blk_file not defined in policy.
+[    6.724087] SELinux:  Permission watch_with_perm in class blk_file not defined in policy.
+[    6.725828] SELinux:  Permission watch_reads in class blk_file not defined in policy.
+[    6.727494] SELinux:  Permission map in class sock_file not defined in policy.
+[    6.729035] SELinux:  Permission watch in class sock_file not defined in policy.
+[    6.730605] SELinux:  Permission watch_mount in class sock_file not defined in policy.
+[    6.732278] SELinux:  Permission watch_sb in class sock_file not defined in policy.
+[    6.733896] SELinux:  Permission watch_with_perm in class sock_file not defined in policy.
+[    6.735648] SELinux:  Permission watch_reads in class sock_file not defined in policy.
+[    6.737379] SELinux:  Permission map in class fifo_file not defined in policy.
+[    6.738917] SELinux:  Permission watch in class fifo_file not defined in policy.
+[    6.740593] SELinux:  Permission watch_mount in class fifo_file not defined in policy.
+[    6.742272] SELinux:  Permission watch_sb in class fifo_file not defined in policy.
+[    6.743891] SELinux:  Permission watch_with_perm in class fifo_file not defined in policy.
+[    6.745644] SELinux:  Permission watch_reads in class fifo_file not defined in policy.
+[    6.747324] SELinux:  Permission map in class socket not defined in policy.
+[    6.748815] SELinux:  Permission map in class tcp_socket not defined in policy.
+[    6.750377] SELinux:  Permission map in class udp_socket not defined in policy.
+[    6.751940] SELinux:  Permission map in class rawip_socket not defined in policy.
+[    6.753538] SELinux:  Permission map in class netlink_socket not defined in policy.
+[    6.755162] SELinux:  Permission map in class packet_socket not defined in policy.
+[    6.756697] SELinux:  Permission map in class key_socket not defined in policy.
+[    6.757952] SELinux:  Permission map in class unix_stream_socket not defined in policy.
+[    6.759325] SELinux:  Permission map in class unix_dgram_socket not defined in policy.
+[    6.760699] SELinux:  Permission map in class netlink_route_socket not defined in policy.
+[    6.762097] SELinux:  Permission map in class netlink_tcpdiag_socket not defined in policy.
+[    6.763528] SELinux:  Permission map in class netlink_nflog_socket not defined in policy.
+[    6.764931] SELinux:  Permission map in class netlink_xfrm_socket not defined in policy.
+[    6.766321] SELinux:  Permission map in class netlink_selinux_socket not defined in policy.
+[    6.767742] SELinux:  Permission map in class netlink_iscsi_socket not defined in policy.
+[    6.769151] SELinux:  Permission map in class netlink_audit_socket not defined in policy.
+[    6.770558] SELinux:  Permission map in class netlink_fib_lookup_socket not defined in policy.
+[    6.772032] SELinux:  Permission map in class netlink_connector_socket not defined in policy.
+[    6.773918] SELinux:  Permission map in class netlink_netfilter_socket not defined in policy.
+[    6.775725] SELinux:  Permission map in class netlink_dnrt_socket not defined in policy.
+[    6.777457] SELinux:  Permission map in class netlink_kobject_uevent_socket not defined in policy.
+[    6.779361] SELinux:  Permission map in class netlink_generic_socket not defined in policy.
+[    6.781146] SELinux:  Permission map in class netlink_scsitransport_socket not defined in policy.
+[    6.783027] SELinux:  Permission map in class netlink_rdma_socket not defined in policy.
+[    6.784753] SELinux:  Permission map in class netlink_crypto_socket not defined in policy.
+[    6.786539] SELinux:  Permission map in class appletalk_socket not defined in policy.
+[    6.788210] SELinux:  Permission map in class dccp_socket not defined in policy.
+[    6.789885] SELinux:  Permission perfmon in class capability2 not defined in policy.
+[    6.791533] SELinux:  Permission bpf in class capability2 not defined in policy.
+[    6.793113] SELinux:  Permission checkpoint_restore in class capability2 not defined in policy.
+[    6.794962] SELinux:  Permission map in class tun_socket not defined in policy.
+[    6.796529] SELinux:  Permission perfmon in class cap2_userns not defined in policy.
+[    6.798164] SELinux:  Permission bpf in class cap2_userns not defined in policy.
+[    6.799736] SELinux:  Permission checkpoint_restore in class cap2_userns not defined in policy.
+[    6.801588] SELinux:  Class sctp_socket not defined in policy.
+[    6.802838] SELinux:  Class icmp_socket not defined in policy.
+[    6.804087] SELinux:  Class ax25_socket not defined in policy.
+[    6.805344] SELinux:  Class ipx_socket not defined in policy.
+[    6.806518] SELinux:  Class netrom_socket not defined in policy.
+[    6.807804] SELinux:  Class atmpvc_socket not defined in policy.
+[    6.809093] SELinux:  Class x25_socket not defined in policy.
+[    6.810322] SELinux:  Class rose_socket not defined in policy.
+[    6.811347] SELinux:  Class decnet_socket not defined in policy.
+[    6.812639] SELinux:  Class atmsvc_socket not defined in policy.
+[    6.813922] SELinux:  Class rds_socket not defined in policy.
+[    6.815151] SELinux:  Class irda_socket not defined in policy.
+[    6.816407] SELinux:  Class pppox_socket not defined in policy.
+[    6.817671] SELinux:  Class llc_socket not defined in policy.
+[    6.818902] SELinux:  Class can_socket not defined in policy.
+[    6.820133] SELinux:  Class tipc_socket not defined in policy.
+[    6.821382] SELinux:  Class bluetooth_socket not defined in policy.
+[    6.822819] SELinux:  Class iucv_socket not defined in policy.
+[    6.824070] SELinux:  Class rxrpc_socket not defined in policy.
+[    6.825344] SELinux:  Class isdn_socket not defined in policy.
+[    6.826602] SELinux:  Class phonet_socket not defined in policy.
+[    6.827900] SELinux:  Class ieee802154_socket not defined in policy.
+[    6.829263] SELinux:  Class caif_socket not defined in policy.
+[    6.830508] SELinux:  Class alg_socket not defined in policy.
+[    6.831725] SELinux:  Class nfc_socket not defined in policy.
+[    6.832947] SELinux:  Class vsock_socket not defined in policy.
+[    6.834200] SELinux:  Class kcm_socket not defined in policy.
+[    6.835410] SELinux:  Class qipcrtr_socket not defined in policy.
+[    6.836746] SELinux:  Class smc_socket not defined in policy.
+[    6.837972] SELinux:  Class infiniband_pkey not defined in policy.
+[    6.839392] SELinux:  Class infiniband_endport not defined in policy.
+[    6.840792] SELinux:  Class bpf not defined in policy.
+[    6.841904] SELinux:  Class xdp_socket not defined in policy.
+[    6.843134] SELinux:  Class perf_event not defined in policy.
+[    6.844371] SELinux:  Class lockdown not defined in policy.
+[    6.845563] SELinux:  Class anon_inode not defined in policy.
+[    6.846798] SELinux: the above unknown classes and permissions will be allowed
+[    6.866123] SELinux:  policy capability network_peer_controls=1
+[    6.867437] SELinux:  policy capability open_perms=1
+[    6.868272] SELinux:  policy capability extended_socket_class=0
+[    6.869193] SELinux:  policy capability always_check_network=0
+[    6.870100] SELinux:  policy capability cgroup_seclabel=0
+[    6.870986] SELinux:  policy capability nnp_nosuid_transition=0
+[    6.871900] SELinux:  policy capability genfs_seclabel_symlinks=0
+[    6.905894] audit: type=1403 audit(1626336894.717:2): auid=4294967295 ses=4294967295 lsm=selinux res=1
+[    6.912441] systemd[1]: Successfully loaded SELinux policy in 696.428ms.
+[    6.927543] audit: type=1400 audit(1626336894.739:3): avc:  denied  { associate } for  pid=1 comm="systemd" name="pts" scontext=system_u:object_r:devpts_t:s0 tcontext=system_u:object_r:device_t:s0 tclass=filesystem permissive=1
+[    6.944142] systemd[1]: Relabelled /dev and /run in 11.010ms.
+[    6.952092] random: systemd: uninitialized urandom read (16 bytes read)
+[    6.968756] systemd[1]: systemd 232 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+[    6.972899] systemd[1]: Detected virtualization qemu.
+[    6.973754] systemd[1]: Detected architecture x86-64.
+[    6.976560] systemd[1]: Set hostname to <syzkaller>.
+[    6.992252] random: systemd: uninitialized urandom read (16 bytes read)
+[    6.997549] random: systemd-cryptse: uninitialized urandom read (16 bytes read)
+[    7.006701] systemd-cryptse (78) used greatest stack depth: 27048 bytes left
+[    7.040214] systemd-gpt-aut (85) used greatest stack depth: 26352 bytes left
+[    7.046579] grep (89) used greatest stack depth: 26272 bytes left
+[    7.048015] selinux-autorel (82) used greatest stack depth: 26224 bytes left
+[    7.121659] systemd[1]: Listening on udev Control Socket.
+[    7.125062] systemd[1]: Listening on Journal Audit Socket.
+[    7.125111] audit: type=1400 audit(1626336894.936:4): avc:  denied  { audit_read } for  pid=1 comm="systemd" capability=37  scontext=system_u:system_r:kernel_t:s0 tcontext=system_u:system_r:kernel_t:s0 tclass=capability2 permissive=1
+[    7.131897] systemd[1]: Listening on Journal Socket (/dev/log).
+[    7.134843] systemd[1]: Listening on Syslog Socket.
+[    7.136813] systemd[1]: Reached target Swap.
+[    7.139714] systemd[1]: Listening on Journal Socket.
+[    7.207325] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[    7.287670] systemd-tmpfile (93) used greatest stack depth: 25624 bytes left
+[    7.439675] udevadm (107) used greatest stack depth: 25400 bytes left
+[    7.530994] audit: type=1107 audit(1626336895.342:5): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:kernel_t:s0 msg='avc:  denied  { stop } for auid=n/a uid=0 gid=0 path="/lib/systemd/system/systemd-journald.service" cmdline="/bin/journalctl --flush" scontext=system_u:system_r:kernel_t:s0 tcontext=system_u:object_r:unlabeled_t:s0 tclass=service
+                exe="/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+[    7.538631] systemd-journald[96]: Received request to flush runtime journal from PID 1
+[    7.806199] random: crng init done
+[    7.806990] random: 7 urandom warning(s) missed due to ratelimiting
+[    8.180034] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    8.197893] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    9.345384] systemd-user-se (244) used greatest stack depth: 25128 bytes left
+[   15.881612] cgroup: Unknown subsys name 'perf_event'
+[   15.885365] cgroup: Unknown subsys name 'net_cls'
+[   21.975384] cgroup: Unknown subsys name 'perf_event'
+[   21.976795] cgroup: Unknown subsys name 'net_cls'
+[   24.272943] tmpfs: Bad value for 'mpol'
+[   24.287117] tmpfs: Bad value for 'mpol'
+[   24.301628] tmpfs: Bad value for 'mpol'
+[   24.317918] tmpfs: Bad value for 'mpol'
+[   24.340305] tmpfs: Bad value for 'mpol'
+[   24.356075] tmpfs: Bad value for 'mpol'
+[   24.371311] tmpfs: Bad value for 'mpol'
+[   28.746773] 9pnet: p9_fd_create_unix (1807): problem connecting socket: ./file1: -2
+[   28.759113] 9pnet: p9_fd_create_unix (1809): problem connecting socket: ./file1: -2
+[   28.772122] 9pnet: p9_fd_create_unix (1811): problem connecting socket: ./file1: -2
+[   28.784696] 9pnet: p9_fd_create_unix (1813): problem connecting socket: ./file1: -2
+[   74.762688] capability: warning: `syz-executor' uses 32-bit capabilities (legacy support in use)
+[   74.842092] tmpfs: Bad value for 'mpol'
+[   74.852867] tmpfs: Bad value for 'mpol'
+[   74.863444] tmpfs: Bad value for 'mpol'
+[   74.875499] tmpfs: Bad value for 'mpol'
+[   87.724310] SELinux:  duplicate or incompatible mount options
+[   87.741175] SELinux:  duplicate or incompatible mount options
+[   87.755655] SELinux:  duplicate or incompatible mount options
+[   87.769054] SELinux:  duplicate or incompatible mount options
+[  109.808128] kernel write not supported for file [eventfd] (pid: 113 comm: kworker/0:3)
+[  109.824644] kernel write not supported for file [eventfd] (pid: 113 comm: kworker/0:3)
+[  109.838402] kernel write not supported for file [eventfd] (pid: 113 comm: kworker/0:3)
+[  109.859228] kernel write not supported for file [eventfd] (pid: 48 comm: kworker/1:1)
+[  118.240423] SELinux:  duplicate or incompatible mount options
+[  118.243533] SELinux:  duplicate or incompatible mount options
+[  118.254146] SELinux:  duplicate or incompatible mount options
+[  118.265393] SELinux:  duplicate or incompatible mount options
+[  118.282840] SELinux:  duplicate or incompatible mount options
+[  118.303858] SELinux:  duplicate or incompatible mount options
+[  118.317770] SELinux:  duplicate or incompatible mount options
+[  118.330996] SELinux:  duplicate or incompatible mount options
+[  139.031823] tmpfs: Bad value for 'nr_inodes'
+[  139.043724] tmpfs: Bad value for 'nr_inodes'
+[  139.054864] tmpfs: Bad value for 'nr_inodes'
+[  139.066512] tmpfs: Bad value for 'nr_inodes'
+[  139.376448] new mount options do not match the existing superblock, will be ignored
+[  139.381540] new mount options do not match the existing superblock, will be ignored
+[  139.393969] new mount options do not match the existing superblock, will be ignored
+[  139.407396] new mount options do not match the existing superblock, will be ignored
+[  139.422219] new mount options do not match the existing superblock, will be ignored
+[  139.438969] new mount options do not match the existing superblock, will be ignored
+[  139.456143] new mount options do not match the existing superblock, will be ignored
+[  139.470522] new mount options do not match the existing superblock, will be ignored
+[  182.423576] new mount options do not match the existing superblock, will be ignored
+[  182.440455] new mount options do not match the existing superblock, will be ignored
+[  182.454659] new mount options do not match the existing superblock, will be ignored
+[  182.470405] new mount options do not match the existing superblock, will be ignored
+[  200.253332] SELinux: security_context_str_to_sid(sysadm_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[  200.256995] SELinux: security_context_str_to_sid(sysadm_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[  200.268590] SELinux: security_context_str_to_sid(sysadm_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[  200.281119] SELinux: security_context_str_to_sid(sysadm_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[  200.294580] SELinux: security_context_str_to_sid(sysadm_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[  231.273842] tmpfs: Bad value for 'mpol'
+[  231.286839] tmpfs: Bad value for 'mpol'
+[  231.299303] tmpfs: Bad value for 'mpol'
+[  231.311710] tmpfs: Bad value for 'mpol'
+[  262.229012] autofs4:pid:5406:autofs_fill_super: called with bogus options
+[  262.232290] autofs4:pid:5406:autofs_fill_super: called with bogus options
+[  262.243766] autofs4:pid:5408:autofs_fill_super: called with bogus options
+[  262.257146] autofs4:pid:5410:autofs_fill_super: called with bogus options
+[  262.269302] autofs4:pid:5412:autofs_fill_super: called with bogus options
+[  274.358322] 9pnet: Could not find request transport: xen
+[  274.373630] 9pnet: Could not find request transport: xen
+[  274.386033] 9pnet: Could not find request transport: xen
+[  274.396868] 9pnet: Could not find request transport: xen
+[  274.755938] new mount options do not match the existing superblock, will be ignored
+[  274.759010] new mount options do not match the existing superblock, will be ignored
+[  274.772335] new mount options do not match the existing superblock, will be ignored
+[  274.786819] new mount options do not match the existing superblock, will be ignored
+[  274.800047] new mount options do not match the existing superblock, will be ignored
+[  275.607674] tmpfs: Bad value for 'mpol'
+[  275.620863] tmpfs: Bad value for 'mpol'
+[  275.633289] tmpfs: Bad value for 'mpol'
+[  275.645297] tmpfs: Bad value for 'mpol'
+[  276.022257] capability: warning: `syz-executor' uses deprecated v2 capabilities in a way that may be insecure
+[  276.070097] 9p: Unknown Cache mode n
+[  276.072756] 9p: Unknown Cache mode n
+[  276.086604] 9p: Unknown Cache mode n
+[  276.100905] 9p: Unknown Cache mode n
+[  276.113758] 9p: Unknown Cache mode n
+[  276.139531] 9p: Unknown Cache mode n
+[  276.158532] 9p: Unknown Cache mode n
+[  276.174329] 9p: Unknown Cache mode n
+[  276.359453] new mount options do not match the existing superblock, will be ignored
+[  276.362207] new mount options do not match the existing superblock, will be ignored
+[  276.376370] new mount options do not match the existing superblock, will be ignored
+[  276.390281] new mount options do not match the existing superblock, will be ignored
+[  276.402104] new mount options do not match the existing superblock, will be ignored
+[  276.416842] new mount options do not match the existing superblock, will be ignored
+[  276.429372] new mount options do not match the existing superblock, will be ignored
+[  276.443345] new mount options do not match the existing superblock, will be ignored
+[  277.281431] new mount options do not match the existing superblock, will be ignored
+[  277.285321] new mount options do not match the existing superblock, will be ignored
+[  277.298181] new mount options do not match the existing superblock, will be ignored
+[  277.312714] new mount options do not match the existing superblock, will be ignored
+[  277.326435] new mount options do not match the existing superblock, will be ignored
+[  277.340241] new mount options do not match the existing superblock, will be ignored
+[  277.355925] new mount options do not match the existing superblock, will be ignored
+[  277.369993] new mount options do not match the existing superblock, will be ignored
+[  277.385250] new mount options do not match the existing superblock, will be ignored
+[  277.398159] new mount options do not match the existing superblock, will be ignored
+[  277.411310] new mount options do not match the existing superblock, will be ignored
+[  293.920281] new mount options do not match the existing superblock, will be ignored
+[  293.923636] new mount options do not match the existing superblock, will be ignored
+[  293.936119] new mount options do not match the existing superblock, will be ignored
+[  293.951380] new mount options do not match the existing superblock, will be ignored
+[  293.966357] new mount options do not match the existing superblock, will be ignored
+[  293.981132] new mount options do not match the existing superblock, will be ignored
+[  293.997138] new mount options do not match the existing superblock, will be ignored
+[  294.012347] new mount options do not match the existing superblock, will be ignored
+[  302.042393] nfs4: Bad value for 'source'
+[  302.045347] nfs4: Bad value for 'source'
+[  302.056140] nfs4: Bad value for 'source'
+[  302.067941] nfs4: Bad value for 'source'
+[  302.079764] nfs4: Bad value for 'source'
+[  303.540442] new mount options do not match the existing superblock, will be ignored
+[  303.544229] new mount options do not match the existing superblock, will be ignored
+[  303.556830] new mount options do not match the existing superblock, will be ignored
+[  303.569364] new mount options do not match the existing superblock, will be ignored
+[  303.582849] new mount options do not match the existing superblock, will be ignored
+[  303.780766] new mount options do not match the existing superblock, will be ignored
+[  303.784186] new mount options do not match the existing superblock, will be ignored
+[  303.797593] new mount options do not match the existing superblock, will be ignored
+[  303.811712] new mount options do not match the existing superblock, will be ignored
+[  303.831762] new mount options do not match the existing superblock, will be ignored
+[  306.529409] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  306.554155] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  306.641521] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  306.724188] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  306.825420] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  308.580979] tmpfs: Bad value for 'uid'
+[  308.670191] tmpfs: Bad value for 'uid'
+[  308.754546] tmpfs: Bad value for 'uid'
+[  308.839944] tmpfs: Bad value for 'uid'
+-------
+
+07/17/21 06:00:01
+[  323.323897] 9pnet: Insufficient options for proto=fd
+[  323.333513] 9pnet: Insufficient options for proto=fd
+[  323.425450] 9pnet: Insufficient options for proto=fd
+[  323.506097] 9pnet: Insufficient options for proto=fd
+[  323.584927] 9pnet: Insufficient options for proto=fd
+[  324.832133] new mount options do not match the existing superblock, will be ignored
+[  324.838047] new mount options do not match the existing superblock, will be ignored
+[  324.921196] new mount options do not match the existing superblock, will be ignored
+[  325.000009] new mount options do not match the existing superblock, will be ignored
+[  325.086726] new mount options do not match the existing superblock, will be ignored
+[  328.391882] new mount options do not match the existing superblock, will be ignored
+[  328.394709] new mount options do not match the existing superblock, will be ignored
+[  328.479348] new mount options do not match the existing superblock, will be ignored
+[  328.566746] new mount options do not match the existing superblock, will be ignored
+[  328.648467] new mount options do not match the existing superblock, will be ignored
+[  345.195874] SELinux:  Context /usr/sbin/cupsd is not valid (left unmapped).
+[  348.977270] 9pnet: Insufficient options for proto=fd
+[  356.921420] new mount options do not match the existing superblock, will be ignored
+[  356.925828] new mount options do not match the existing superblock, will be ignored
+[  357.010802] new mount options do not match the existing superblock, will be ignored
+[  357.095608] new mount options do not match the existing superblock, will be ignored
+[  357.187406] new mount options do not match the existing superblock, will be ignored
+[  357.272300] new mount options do not match the existing superblock, will be ignored
+[  357.356395] new mount options do not match the existing superblock, will be ignored
+[  357.441937] new mount options do not match the existing superblock, will be ignored
+[  419.960822] 9pnet: p9_fd_create_tcp (8823): problem connecting socket to 127.0.0.1
+[  419.964974] 9pnet: p9_fd_create_tcp (8823): problem connecting socket to 127.0.0.1
+[  420.093676] 9pnet: p9_fd_create_tcp (8825): problem connecting socket to 127.0.0.1
+[  420.220877] 9pnet: p9_fd_create_tcp (8827): problem connecting socket to 127.0.0.1
+[  420.350554] 9pnet: p9_fd_create_tcp (8829): problem connecting socket to 127.0.0.1
+[  435.014412] mmap: syz-executor (8982) uses deprecated remap_file_pages() syscall. See Documentation/vm/remap_file_pages.rst.
+[  438.154791] SELinux:  Context  is not valid (left unmapped).
+[  440.449222] tmpfs: Bad value for 'mpol'
+[  440.562238] tmpfs: Bad value for 'mpol'
+[  440.670159] tmpfs: Bad value for 'mpol'
+[  440.788896] tmpfs: Bad value for 'mpol'
+[  441.272592] new mount options do not match the existing superblock, will be ignored
+[  441.279940] new mount options do not match the existing superblock, will be ignored
+[  441.403332] new mount options do not match the existing superblock, will be ignored
+[  441.508660] new mount options do not match the existing superblock, will be ignored
+[  441.642277] new mount options do not match the existing superblock, will be ignored
+[  441.779288] new mount options do not match the existing superblock, will be ignored
+[  441.786832] new mount options do not match the existing superblock, will be ignored
+[  490.152162] tmpfs: Bad value for 'mpol'
+[  490.234127] tmpfs: Bad value for 'mpol'
+[  490.321352] tmpfs: Bad value for 'mpol'
+[  490.411795] tmpfs: Bad value for 'mpol'
+[  492.695792] 9pnet: Could not find request transport: f
+[  492.713881] 9pnet: Could not find request transport: f
+[  492.814875] 9pnet: Could not find request transport: f
+[  492.923677] 9pnet: Could not find request transport: f
+[  493.012472] 9pnet: Could not find request transport: f
+[  493.103685] Module has invalid ELF structures
+[  493.108191] Module has invalid ELF structures
+[  493.188773] Module has invalid ELF structures
+[  493.259277] Module has invalid ELF structures
+[  493.321491] Module has invalid ELF structures
+[  510.497623] tmpfs: Bad value for 'mpol'
+[  510.505649] tmpfs: Bad value for 'mpol'
+[  510.603240] tmpfs: Bad value for 'mpol'
+[  510.685848] tmpfs: Bad value for 'mpol'
+[  510.763454] tmpfs: Bad value for 'mpol'
+[  543.218831] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  543.246454] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  543.339958] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  543.476427] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  543.573551] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  543.668987] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  543.755393] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  543.842359] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[  604.636071] SELinux:  duplicate or incompatible mount options
+[  604.749363] SELinux:  duplicate or incompatible mount options
+[  604.830442] SELinux:  duplicate or incompatible mount options
+[  604.906905] SELinux:  duplicate or incompatible mount options
+[  604.988973] tmpfs: Bad value for 'mpol'
+[  605.100426] tmpfs: Bad value for 'mpol'
+[  605.184586] tmpfs: Bad value for 'mpol'
+[  605.283800] tmpfs: Bad value for 'mpol'
+[  614.262885] new mount options do not match the existing superblock, will be ignored
+[  614.266047] new mount options do not match the existing superblock, will be ignored
+[  614.347494] new mount options do not match the existing superblock, will be ignored
+[  614.435814] new mount options do not match the existing superblock, will be ignored
+[  614.530362] new mount options do not match the existing superblock, will be ignored
+[  633.256369] new mount options do not match the existing superblock, will be ignored
+[  633.261386] new mount options do not match the existing superblock, will be ignored
+[  633.373227] new mount options do not match the existing superblock, will be ignored
+[  633.480216] new mount options do not match the existing superblock, will be ignored
+[  633.560175] new mount options do not match the existing superblock, will be ignored
+[  641.333737] kernel read not supported for file inotify (pid: 22 comm: kworker/0:1)
+[  642.462686] kernel read not supported for file inotify (pid: 22 comm: kworker/0:1)
+[  643.640725] kernel read not supported for file inotify (pid: 5144 comm: kworker/1:3)
+[  644.765928] kernel read not supported for file inotify (pid: 22 comm: kworker/0:1)
+[  645.883221] kernel read not supported for file inotify (pid: 5144 comm: kworker/1:3)
+[  646.984436] kernel read not supported for file inotify (pid: 22 comm: kworker/0:1)
+[  648.157761] kernel read not supported for file inotify (pid: 5144 comm: kworker/1:3)
+[  667.842268] tmpfs: Bad value for 'mpol'
+[  667.932742] tmpfs: Bad value for 'mpol'
+[  668.034076] tmpfs: Bad value for 'mpol'
+[  668.142921] tmpfs: Bad value for 'mpol'
+[  668.241546] autofs4:pid:12059:autofs_fill_super: called with bogus options
+[  668.346164] autofs4:pid:12061:autofs_fill_super: called with bogus options
+[  668.441907] autofs4:pid:12063:autofs_fill_super: called with bogus options
+[  668.520213] autofs4:pid:12065:autofs_fill_super: called with bogus options
+[  685.942398] new mount options do not match the existing superblock, will be ignored
+[  686.592265] tmpfs: Unknown parameter 'n'
+[  686.679097] tmpfs: Unknown parameter 'n'
+[  686.802038] tmpfs: Unknown parameter 'n'
+[  686.886136] tmpfs: Unknown parameter 'n'
+[  689.856687] tmpfs: Unsupported parameter 'huge'
+[  689.967064] tmpfs: Unsupported parameter 'huge'
+[  690.044754] tmpfs: Unsupported parameter 'huge'
+[  690.152368] tmpfs: Unsupported parameter 'huge'
+[  718.498244] SELinux:  duplicate or incompatible mount options
+[  718.612256] SELinux:  duplicate or incompatible mount options
+[  718.743639] SELinux:  duplicate or incompatible mount options
+[  718.862896] SELinux:  duplicate or incompatible mount options
+[  728.123024] tmpfs: Bad value for 'mpol'
+[  728.241203] tmpfs: Bad value for 'mpol'
+[  728.338819] tmpfs: Bad value for 'mpol'
+[  728.443483] tmpfs: Bad value for 'mpol'
+[  729.681997] 9pnet: Insufficient options for proto=fd
+[  729.770088] 9pnet: Insufficient options for proto=fd
+[  729.866465] 9pnet: Insufficient options for proto=fd
+[  729.952468] 9pnet: Insufficient options for proto=fd
+[  731.672309] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev sda, type ext4) errno=-22
+[  731.683788] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev sda, type ext4) errno=-22
+[  731.772433] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev sda, type ext4) errno=-22
+[  731.864035] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev sda, type ext4) errno=-22
+[  731.960991] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev sda, type ext4) errno=-22
+[  734.074499] tmpfs: Bad value for 'nr_inodes'
+[  734.157166] tmpfs: Bad value for 'nr_inodes'
+[  734.257293] tmpfs: Bad value for 'nr_inodes'
+[  734.406773] tmpfs: Bad value for 'nr_inodes'
+[  749.076435] new mount options do not match the existing superblock, will be ignored
+[  749.080962] option changes via remount are deprecated (pid=13107 comm=syz-executor)
+[  749.085729] new mount options do not match the existing superblock, will be ignored
+[  749.088136] option changes via remount are deprecated (pid=13107 comm=syz-executor)
+[  749.190646] new mount options do not match the existing superblock, will be ignored
+[  749.194322] option changes via remount are deprecated (pid=13110 comm=syz-executor)
+[  749.281838] new mount options do not match the existing superblock, will be ignored
+[  749.286067] option changes via remount are deprecated (pid=13112 comm=syz-executor)
+[  749.378532] new mount options do not match the existing superblock, will be ignored
+[  749.382990] option changes via remount are deprecated (pid=13114 comm=syz-executor)
+[  762.944109] tmpfs: Bad value for 'mpol'
+[  763.047220] tmpfs: Bad value for 'mpol'
+[  763.129599] tmpfs: Bad value for 'mpol'
+[  763.224763] tmpfs: Bad value for 'mpol'
+[  776.374549] 9pnet: Insufficient options for proto=fd
+[  776.384364] 9pnet: Insufficient options for proto=fd
+[  778.445585] 9pnet: p9_fd_create_tcp (13453): problem connecting socket to 127.0.0.1
+[  778.564410] 9pnet: p9_fd_create_tcp (13455): problem connecting socket to 127.0.0.1
+[  778.660875] 9pnet: p9_fd_create_tcp (13457): problem connecting socket to 127.0.0.1
+[  778.758655] 9pnet: p9_fd_create_tcp (13459): problem connecting socket to 127.0.0.1
+[  797.009300] tmpfs: Bad value for 'nr_inodes'
+[  797.123095] tmpfs: Bad value for 'nr_inodes'
+[  797.215303] tmpfs: Bad value for 'nr_inodes'
+[  797.320327] tmpfs: Bad value for 'nr_inodes'
+[  801.002092] EXT4-fs (sda): re-mounted. Opts: . Quota mode: none.
+[  801.010858] EXT4-fs (sda): re-mounted. Opts: . Quota mode: none.
+[  801.023874] EXT4-fs (sda): re-mounted. Opts: . Quota mode: none.
+[  801.038285] EXT4-fs (sda): re-mounted. Opts: . Quota mode: none.
+[  801.051711] EXT4-fs (sda): re-mounted. Opts: . Quota mode: none.
+[  807.176300] autofs4:pid:14245:autofs_fill_super: called with bogus options
+[  807.191051] autofs4:pid:14247:autofs_fill_super: called with bogus options
+[  807.205106] autofs4:pid:14249:autofs_fill_super: called with bogus options
+[  807.218323] autofs4:pid:14251:autofs_fill_super: called with bogus options
+[  807.559329] 9pnet: p9_fd_create_unix (14308): problem connecting socket: ./file0/../file0: -111
+[  807.563255] 9pnet: p9_fd_create_unix (14309): problem connecting socket: ./file0/../file0: -111
+[  807.580849] 9pnet: p9_fd_create_unix (14311): problem connecting socket: ./file0/../file0: -111
+[  807.604448] 9pnet: p9_fd_create_unix (14313): problem connecting socket: ./file0/../file0: -111
+[  807.619912] 9pnet: p9_fd_create_unix (14315): problem connecting socket: ./file0/../file0: -111
+[  860.257272] cgroup: Unknown subsys name 'perf_event'
+[  860.259229] cgroup: Unknown subsys name 'net_cls'
+-------
+
+07/17/21 06:10:01
+[  912.381387] cgroup: Unknown subsys name 'perf_event'
+[  912.383080] cgroup: Unknown subsys name 'net_cls'
+[  964.465014] cgroup: Unknown subsys name 'perf_event'
+[  964.466463] cgroup: Unknown subsys name 'net_cls'
+[ 1016.618939] cgroup: Unknown subsys name 'perf_event'
+[ 1016.620494] cgroup: Unknown subsys name 'net_cls'
+[ 1031.201717] tmpfs: Bad value for 'huge'
+[ 1031.215100] tmpfs: Bad value for 'huge'
+[ 1031.228213] tmpfs: Bad value for 'huge'
+[ 1031.239805] tmpfs: Bad value for 'huge'
+[ 1049.150389] 9p: Unknown access argument u
+[ 1050.171676] 9p: Unknown access argument u
+[ 1051.212257] 9p: Unknown access argument u
+[ 1052.250429] 9p: Unknown access argument u
+[ 1063.418571] tmpfs: Bad value for 'mpol'
+[ 1063.431937] tmpfs: Bad value for 'mpol'
+[ 1063.451063] tmpfs: Bad value for 'mpol'
+[ 1063.462622] tmpfs: Bad value for 'mpol'
+[ 1063.539259] SELinux:  Context proc is not valid (left unmapped).
+[ 1065.358869] new mount options do not match the existing superblock, will be ignored
+[ 1065.361316] new mount options do not match the existing superblock, will be ignored
+[ 1065.375420] new mount options do not match the existing superblock, will be ignored
+[ 1065.389939] new mount options do not match the existing superblock, will be ignored
+[ 1065.405085] new mount options do not match the existing superblock, will be ignored
+[ 1065.422097] new mount options do not match the existing superblock, will be ignored
+[ 1065.437293] new mount options do not match the existing superblock, will be ignored
+[ 1065.451154] new mount options do not match the existing superblock, will be ignored
+[ 1095.205071] SELinux:  Context :@% is not valid (left unmapped).
+[ 1097.415997] SELinux:  duplicate or incompatible mount options
+[ 1098.557004] SELinux:  duplicate or incompatible mount options
+[ 1099.699790] SELinux:  duplicate or incompatible mount options
+[ 1100.738795] SELinux:  duplicate or incompatible mount options
+[ 1101.790187] SELinux:  duplicate or incompatible mount options
+[ 1102.826004] SELinux:  duplicate or incompatible mount options
+[ 1103.962464] SELinux:  duplicate or incompatible mount options
+[ 1104.277984] 9pnet: Insufficient options for proto=fd
+[ 1104.281884] 9pnet: Insufficient options for proto=fd
+[ 1104.298092] 9pnet: Insufficient options for proto=fd
+[ 1104.311349] 9pnet: Insufficient options for proto=fd
+[ 1104.326503] 9pnet: Insufficient options for proto=fd
+[ 1104.736705] 9pnet: Insufficient options for proto=fd
+[ 1104.836462] perf: interrupt took too long (2653 > 2500), lowering kernel.perf_event_max_sample_rate to 75000
+[ 1104.838801] perf: interrupt took too long (3327 > 3316), lowering kernel.perf_event_max_sample_rate to 60000
+[ 1105.250512] perf: interrupt took too long (6767 > 6692), lowering kernel.perf_event_max_sample_rate to 29000
+[ 1105.253351] perf: interrupt took too long (10637 > 10586), lowering kernel.perf_event_max_sample_rate to 18000
+[ 1105.256843] perf: interrupt took too long (13301 > 13296), lowering kernel.perf_event_max_sample_rate to 15000
+[ 1105.260187] perf: interrupt took too long (16630 > 16626), lowering kernel.perf_event_max_sample_rate to 12000
+[ 1105.265273] perf: interrupt took too long (20813 > 20787), lowering kernel.perf_event_max_sample_rate to 9000
+[ 1105.273795] perf: interrupt took too long (26170 > 26016), lowering kernel.perf_event_max_sample_rate to 7000
+[ 1105.326059] perf: interrupt took too long (33362 > 32712), lowering kernel.perf_event_max_sample_rate to 5000
+[ 1111.082012] tmpfs: Bad value for 'mpol'
+[ 1111.093277] tmpfs: Bad value for 'mpol'
+[ 1111.104307] tmpfs: Bad value for 'mpol'
+[ 1111.116922] tmpfs: Bad value for 'mpol'
+[ 1112.449284] tmpfs: Bad value for 'mpol'
+[ 1112.461955] tmpfs: Bad value for 'mpol'
+[ 1112.473304] tmpfs: Bad value for 'mpol'
+[ 1112.485691] tmpfs: Bad value for 'mpol'
+[ 1135.345420] new mount options do not match the existing superblock, will be ignored
+[ 1135.348520] new mount options do not match the existing superblock, will be ignored
+[ 1135.365452] new mount options do not match the existing superblock, will be ignored
+[ 1135.379793] new mount options do not match the existing superblock, will be ignored
+[ 1135.401233] new mount options do not match the existing superblock, will be ignored
+[ 1135.841937] tmpfs: Bad value for 'mpol'
+[ 1135.855001] tmpfs: Bad value for 'mpol'
+[ 1135.868690] tmpfs: Bad value for 'mpol'
+[ 1135.880397] tmpfs: Bad value for 'mpol'
+[ 1142.057851] SELinux:  Context u:r:untrusted_app:s0:c512,c768 is not valid (left unmapped).
+[ 1142.361346] 9pnet: Could not find request transport: fd\xffffffbc\xffffffdd\xffffffa2C\xffffff97\xffffffed\xffffff86\xffffff8f\xffffff90\xffffff97^\xfffffff0\xffffffaa@T\xffffffc3|\xffffffc6dX{YC\xffffff96\xffffffaa
+
+[ 1142.374367] 9pnet: Could not find request transport: fd\xffffffbc\xffffffdd\xffffffa2C\xffffff97\xffffffed\xffffff86\xffffff8f\xffffff90\xffffff97^\xfffffff0\xffffffaa@T\xffffffc3|\xffffffc6dX{YC\xffffff96\xffffffaa
+
+[ 1142.387705] 9pnet: Could not find request transport: fd\xffffffbc\xffffffdd\xffffffa2C\xffffff97\xffffffed\xffffff86\xffffff8f\xffffff90\xffffff97^\xfffffff0\xffffffaa@T\xffffffc3|\xffffffc6dX{YC\xffffff96\xffffffaa
+
+[ 1142.399260] 9pnet: Could not find request transport: fd\xffffffbc\xffffffdd\xffffffa2C\xffffff97\xffffffed\xffffff86\xffffff8f\xffffff90\xffffff97^\xfffffff0\xffffffaa@T\xffffffc3|\xffffffc6dX{YC\xffffff96\xffffffaa
+
+[ 1143.101315] tmpfs: Bad value for 'uid'
+[ 1143.125802] tmpfs: Bad value for 'uid'
+[ 1143.144892] tmpfs: Bad value for 'uid'
+[ 1143.161475] tmpfs: Bad value for 'uid'
+[ 1143.814587] SELinux: security_context_str_to_sid(root) failed for (dev tracefs, type tracefs) errno=-22
+[ 1143.819161] SELinux: security_context_str_to_sid(root) failed for (dev tracefs, type tracefs) errno=-22
+[ 1143.832823] SELinux: security_context_str_to_sid(root) failed for (dev tracefs, type tracefs) errno=-22
+[ 1143.848780] SELinux: security_context_str_to_sid(root) failed for (dev tracefs, type tracefs) errno=-22
+[ 1143.870093] SELinux: security_context_str_to_sid(root) failed for (dev tracefs, type tracefs) errno=-22
+[ 1144.699155] new mount options do not match the existing superblock, will be ignored
+[ 1144.702228] new mount options do not match the existing superblock, will be ignored
+[ 1144.718726] new mount options do not match the existing superblock, will be ignored
+[ 1144.735425] new mount options do not match the existing superblock, will be ignored
+[ 1144.750873] new mount options do not match the existing superblock, will be ignored
+[ 1144.765322] SELinux:  duplicate or incompatible mount options
+[ 1144.778597] SELinux:  duplicate or incompatible mount options
+[ 1144.791306] SELinux:  duplicate or incompatible mount options
+[ 1144.809531] SELinux:  duplicate or incompatible mount options
+[ 1156.696422] new mount options do not match the existing superblock, will be ignored
+[ 1156.699473] new mount options do not match the existing superblock, will be ignored
+[ 1156.713307] new mount options do not match the existing superblock, will be ignored
+[ 1156.727983] new mount options do not match the existing superblock, will be ignored
+[ 1156.744514] new mount options do not match the existing superblock, will be ignored
+[ 1157.064139] 9pnet: Insufficient options for proto=fd
+[ 1157.077869] 9pnet: Insufficient options for proto=fd
+[ 1157.091413] 9pnet: Insufficient options for proto=fd
+[ 1157.104090] 9pnet: Insufficient options for proto=fd
+[ 1189.526961] tmpfs: Bad value for 'mpol'
+[ 1189.539411] tmpfs: Bad value for 'mpol'
+[ 1189.551640] tmpfs: Bad value for 'mpol'
+[ 1189.566177] tmpfs: Bad value for 'mpol'
+[ 1191.558333] devpts: called with bogus options
+[ 1191.571664] devpts: called with bogus options
+[ 1191.583150] devpts: called with bogus options
+[ 1191.594568] devpts: called with bogus options
+[ 1191.649453] tmpfs: Unknown parameter 'trans'
+[ 1191.652190] tmpfs: Unknown parameter 'trans'
+[ 1191.665161] tmpfs: Unknown parameter 'trans'
+[ 1191.682678] tmpfs: Unknown parameter 'trans'
+[ 1191.697409] tmpfs: Unknown parameter 'trans'
+[ 1191.883209] 9pnet: Unknown protocol version 9
+[ 1191.887016] 9pnet: Unknown protocol version 9
+[ 1191.897561] 9pnet: Unknown protocol version 9
+[ 1191.908962] 9pnet: Unknown protocol version 9
+[ 1191.920357] 9pnet: Unknown protocol version 9
+[ 1243.422875] cgroup: Unknown subsys name 'perf_event'
+[ 1243.425092] cgroup: Unknown subsys name 'net_cls'
+[ 1295.568315] cgroup: Unknown subsys name 'perf_event'
+[ 1295.570322] cgroup: Unknown subsys name 'net_cls'
+[ 1347.628676] cgroup: Unknown subsys name 'perf_event'
+[ 1347.630153] cgroup: Unknown subsys name 'net_cls'
+[ 1399.686079] cgroup: Unknown subsys name 'perf_event'
+[ 1399.688308] cgroup: Unknown subsys name 'net_cls'
+[ 1407.165894] new mount options do not match the existing superblock, will be ignored
+[ 1407.169967] new mount options do not match the existing superblock, will be ignored
+[ 1407.182879] new mount options do not match the existing superblock, will be ignored
+[ 1407.197087] new mount options do not match the existing superblock, will be ignored
+[ 1407.211045] new mount options do not match the existing superblock, will be ignored
+[ 1414.959905] new mount options do not match the existing superblock, will be ignored
+[ 1414.965954] new mount options do not match the existing superblock, will be ignored
+[ 1414.978245] new mount options do not match the existing superblock, will be ignored
+[ 1414.991495] new mount options do not match the existing superblock, will be ignored
+[ 1415.008168] new mount options do not match the existing superblock, will be ignored
+[ 1424.100991] nfs: Unknown parameter 'security.apparmor'
+[ 1424.113332] nfs: Unknown parameter 'security.apparmor'
+[ 1424.125990] nfs: Unknown parameter 'security.apparmor'
+[ 1424.137805] nfs: Unknown parameter 'security.apparmor'
+[ 1433.061326] kernel write not supported for file [eventfd] (pid: 13516 comm: kworker/1:0)
+[ 1433.064714] kernel write not supported for file [eventfd] (pid: 13516 comm: kworker/1:0)
+[ 1433.077869] kernel write not supported for file [eventfd] (pid: 13516 comm: kworker/1:0)
+[ 1433.091351] kernel write not supported for file [eventfd] (pid: 13516 comm: kworker/1:0)
+[ 1433.105701] kernel write not supported for file [eventfd] (pid: 13516 comm: kworker/1:0)
+[ 1434.628834] tmpfs: Bad value for 'size'
+[ 1434.642672] tmpfs: Bad value for 'size'
+[ 1434.654186] tmpfs: Bad value for 'size'
+[ 1434.667889] tmpfs: Bad value for 'size'
+[ 1436.195409] new mount options do not match the existing superblock, will be ignored
+-------
+
+07/19/21 03:50:01
+[ 1779.389349] SELinux:  Context system_u:object_r:l is not valid (left unmapped).
+[ 1781.712964] EXT4-fs (sda): Unrecognized mount option "trans=tcp" or missing value
+[ 1781.739659] EXT4-fs (sda): Unrecognized mount option "trans=tcp" or missing value
+[ 1781.760468] EXT4-fs (sda): Unrecognized mount option "trans=tcp" or missing value
+[ 1781.783262] EXT4-fs (sda): Unrecognized mount option "trans=tcp" or missing value
+[ 1781.811225] EXT4-fs (sda): Unrecognized mount option "trans=tcp" or missing value
+[ 1781.834016] EXT4-fs (sda): Unrecognized mount option "trans=tcp" or missing value
+[ 1781.858431] EXT4-fs (sda): Unrecognized mount option "trans=tcp" or missing value
+[ 1781.879295] EXT4-fs (sda): Unrecognized mount option "trans=tcp" or missing value
+[ 1781.900504] EXT4-fs (sda): Unrecognized mount option "trans=tcp" or missing value
+[ 1781.923472] EXT4-fs (sda): Unrecognized mount option "trans=tcp" or missing value
+[ 1839.450199] cgroup: Unknown subsys name 'perf_event'
+[ 1839.451972] cgroup: Unknown subsys name 'net_cls'
+[ 1891.553223] cgroup: Unknown subsys name 'perf_event'
+[ 1891.554806] cgroup: Unknown subsys name 'net_cls'
+[ 1943.649854] cgroup: Unknown subsys name 'perf_event'
+[ 1943.652234] cgroup: Unknown subsys name 'net_cls'
+[ 1995.746801] cgroup: Unknown subsys name 'perf_event'
+[ 1995.748805] cgroup: Unknown subsys name 'net_cls'
+[ 1996.948031] new mount options do not match the existing superblock, will be ignored
+[ 1996.953196] new mount options do not match the existing superblock, will be ignored
+[ 1996.967269] new mount options do not match the existing superblock, will be ignored
+[ 1996.981568] new mount options do not match the existing superblock, will be ignored
+[ 1996.995595] new mount options do not match the existing superblock, will be ignored
+[ 1997.381914] tmpfs: Bad value for 'mode'
+[ 1997.394727] tmpfs: Bad value for 'mode'
+[ 1997.405740] tmpfs: Bad value for 'mode'
+[ 1997.417905] tmpfs: Bad value for 'mode'
+[ 2017.565387] Process accounting resumed
+[ 2017.577571] Process accounting resumed
+[ 2017.595486] Process accounting resumed
+[ 2017.608952] Process accounting resumed
+[ 2018.088134] 9pnet: Insufficient options for proto=fd
+[ 2018.091786] 9pnet: Insufficient options for proto=fd
+[ 2018.103569] tmpfs: Bad value for 'mode'
+[ 2018.116882] tmpfs: Bad value for 'mode'
+[ 2018.130222] tmpfs: Bad value for 'mode'
+[ 2018.143986] tmpfs: Bad value for 'mode'
+-------
+
+07/19/21 04:00:01
+[ 2024.752413] SELinux:  Context system_u:object_r:systemd_systemctl_exec_t:s0 is not valid (left unmapped).
+[ 2025.307814] 9pnet: Could not find request transport: f
+[ 2025.491381] SELinux:  duplicate or incompatible mount options
+[ 2025.495519] SELinux:  duplicate or incompatible mount options
+[ 2025.513130] SELinux:  duplicate or incompatible mount options
+[ 2025.525774] SELinux:  duplicate or incompatible mount options
+[ 2025.540382] SELinux:  duplicate or incompatible mount options
+[ 2039.964501] tmpfs: Unknown parameter '{*o/!'
+[ 2039.976042] tmpfs: Unknown parameter '{*o/!'
+[ 2039.989253] tmpfs: Unknown parameter '{*o/!'
+[ 2040.000864] tmpfs: Unknown parameter '{*o/!'
+[ 2041.207899] Process accounting resumed
+[ 2041.212195] Process accounting resumed
+[ 2041.226352] Process accounting resumed
+[ 2041.241018] Process accounting resumed
+[ 2041.252390] Process accounting resumed
+[ 2041.272545] Process accounting resumed
+[ 2041.284785] Process accounting resumed
+[ 2041.298358] Process accounting resumed
+[ 2043.137070] kernel write not supported for file /sg0 (pid: 23812 comm: kworker/1:2)
+[ 2043.152991] kernel write not supported for file /sg0 (pid: 28038 comm: kworker/0:2)
+[ 2043.170569] kernel write not supported for file /sg0 (pid: 28038 comm: kworker/0:2)
+[ 2043.185232] kernel write not supported for file /sg0 (pid: 23812 comm: kworker/1:2)
+[ 2044.334950] tmpfs: Bad value for 'mpol'
+[ 2044.348658] tmpfs: Bad value for 'mpol'
+[ 2044.360503] tmpfs: Bad value for 'mpol'
+[ 2044.371917] tmpfs: Bad value for 'mpol'
+[ 2059.380338] cgroup: Unknown subsys name 'perf_event'
+[ 2059.381970] cgroup: Unknown subsys name 'net_cls'
+[ 2061.495724] cgroup: Unknown subsys name 'perf_event'
+[ 2061.499580] cgroup: Unknown subsys name 'net_cls'
+[ 2081.836414] kernel write not supported for file [eventfd] (pid: 28038 comm: kworker/0:2)
+[ 2081.854841] kernel write not supported for file [eventfd] (pid: 23812 comm: kworker/1:2)
+[ 2081.867804] kernel write not supported for file [eventfd] (pid: 23812 comm: kworker/1:2)
+[ 2081.884494] kernel write not supported for file [eventfd] (pid: 23812 comm: kworker/1:2)
+[ 2082.508329] tmpfs: Bad value for 'mpol'
+[ 2082.520957] tmpfs: Bad value for 'mpol'
+[ 2082.532413] tmpfs: Bad value for 'mpol'
+[ 2082.543956] tmpfs: Bad value for 'mpol'
+[ 2128.677753] sg_write: data in/out 889203538/1 bytes for SCSI command 0x54-- guessing data in;
+                  program syz-executor not setting count and/or reply_len properly
+[ 2128.696986] sg_write: data in/out 889203538/1 bytes for SCSI command 0x54-- guessing data in;
+                  program syz-executor not setting count and/or reply_len properly
+[ 2128.715537] sg_write: data in/out 889203538/1 bytes for SCSI command 0x54-- guessing data in;
+                  program syz-executor not setting count and/or reply_len properly
+[ 2128.731918] sg_write: data in/out 889203538/1 bytes for SCSI command 0x54-- guessing data in;
+                  program syz-executor not setting count and/or reply_len properly
+[ 2134.711806] tmpfs: Bad value for 'mpol'
+[ 2134.726729] tmpfs: Bad value for 'mpol'
+[ 2134.740052] tmpfs: Bad value for 'mpol'
+[ 2134.752030] tmpfs: Bad value for 'mpol'
+[ 2147.881192] new mount options do not match the existing superblock, will be ignored
+[ 2147.887741] new mount options do not match the existing superblock, will be ignored
+[ 2147.902418] new mount options do not match the existing superblock, will be ignored
+[ 2147.920843] new mount options do not match the existing superblock, will be ignored
+[ 2147.939948] new mount options do not match the existing superblock, will be ignored
+[ 2152.380064] Process accounting resumed
+[ 2154.738849] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2154.768677] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2158.158798] kernel read not supported for file inotify (pid: 23812 comm: kworker/1:2)
+[ 2207.205670] cgroup: Unknown subsys name 'perf_event'
+[ 2207.207253] cgroup: Unknown subsys name 'net_cls'
+[ 2210.301436] kernel read not supported for file inotify (pid: 28489 comm: kworker/0:3)
+[ 2212.536859] kernel read not supported for file inotify (pid: 28489 comm: kworker/0:3)
+[ 2214.799806] kernel read not supported for file inotify (pid: 31185 comm: kworker/1:1)
+[ 2217.014046] kernel read not supported for file inotify (pid: 31185 comm: kworker/1:1)
+[ 2219.247864] kernel read not supported for file inotify (pid: 31185 comm: kworker/1:1)
+[ 2221.490080] kernel read not supported for file inotify (pid: 31185 comm: kworker/1:1)
+[ 2233.337314] new mount options do not match the existing superblock, will be ignored
+[ 2233.342111] new mount options do not match the existing superblock, will be ignored
+[ 2233.468447] new mount options do not match the existing superblock, will be ignored
+[ 2233.566316] new mount options do not match the existing superblock, will be ignored
+[ 2233.658044] new mount options do not match the existing superblock, will be ignored
+[ 2240.109192] SELinux: security_context_str_to_sid(staff_u) failed for (dev tracefs, type tracefs) errno=-22
+[ 2240.113559] SELinux: security_context_str_to_sid(staff_u) failed for (dev tracefs, type tracefs) errno=-22
+[ 2240.207696] SELinux: security_context_str_to_sid(staff_u) failed for (dev tracefs, type tracefs) errno=-22
+[ 2240.289443] SELinux: security_context_str_to_sid(staff_u) failed for (dev tracefs, type tracefs) errno=-22
+[ 2240.396517] SELinux: security_context_str_to_sid(staff_u) failed for (dev tracefs, type tracefs) errno=-22
+[ 2242.361922] SELinux:  Context 7\xffffffca\xffffff9c4\xffffffed\xffffffd6\xfffffffe\xffffff9d\xffffffcb\xffffffca\xffffffbd\xffffffd8\xffffffd0\xffffffbf!\xffffffca\xffffffc1\xffffffb7B\xffffffa8.\xffffffaa0\xffffffe0da6\xffffffb26':g\xffffffbb\xffffffa1K\xffffff8a\xffffffe7\xffffffefW-6\xffffff98\xffffffdc\xffffff92\xfffffff0L'F7"\xffffff92|X\xffffffe8\xffffffde	\xffffff8a%\xffffff90\xfffffff4\xffffff88\xffffffa2\xfffffffd\xffffff8egr4XX\xffffff8f\xffffffdd\xffffffd3\xffffffa6\xffffffed\xffffffd4t\xffffff8dQ\xffffffa0\\xffffffe1(i\xfffffff6K	\xffffff9b-\xffffffd2%D 2\xffffffe2NY\xffffff9d\xffffff83\xffffffa4\xffffffe7r\xffffffc3mXh\xffffffa9\xffffffdb$B]\xffffffb5!\xffffffc0\xffffffaf\xffffff9d3i-`\xffffff88\xffffffbe\xffffff89&\xffffffe7\xffffffb6eF\xffffffe75\xffffffe6\xffffffd4B\xffffffc9"k\xffffff8d\xffffffe1/\xffffff97\xffffffb4\xffffffeav\xffffffbd\xffffffe4\xffffff83\xffffff83E?\xffffffe4,\xffffffa28d\xffffffe7\xffffffd9\xffffffd66\xffffffe6\xfffffff9RI\xffffff92g \xffffff83b\xffffffb5t\xffffffb4\xffffffcc$\xffffffe3\xffffffad'\xffffffd9\xffffff8d\xfffffff4qu\xfffffff6\xffffffc5\xffffffefZ\xffffff99\xffffff80\xfffffff2\xffffff8e\xffffffd3H<~$\xffffffda\xffffffb1\\xffffffed~R\xffffffaeb\xffffffc6\xfffffffbF\xffffffe3Y~\xffffffed9\xffffffa9"\xffffff80J\xffffffb0+X~8\xfffffff22\xffffffd7\xffffffc6Op+\xfffffff5\xffffff96\xffffff8a2+\xffffffde\xffffffcd\xffffffc4 is not valid (left unmapped).
+[ 2243.560502] tmpfs: Bad value for 'mpol'
+[ 2243.661100] tmpfs: Bad value for 'mpol'
+[ 2243.753830] tmpfs: Bad value for 'mpol'
+[ 2243.843911] tmpfs: Bad value for 'mpol'
+[ 2269.984764] tmpfs: Bad value for 'mpol'
+[ 2270.075403] tmpfs: Bad value for 'mpol'
+[ 2270.159952] tmpfs: Bad value for 'mpol'
+[ 2270.242773] tmpfs: Bad value for 'mpol'
+[ 2297.026312] Module has invalid ELF structures
+[ 2297.034000] Module has invalid ELF structures
+[ 2297.103301] Module has invalid ELF structures
+[ 2297.169407] Module has invalid ELF structures
+[ 2297.233893] Module has invalid ELF structures
+[ 2313.001303] new mount options do not match the existing superblock, will be ignored
+[ 2313.010333] new mount options do not match the existing superblock, will be ignored
+[ 2313.111833] new mount options do not match the existing superblock, will be ignored
+[ 2313.194335] new mount options do not match the existing superblock, will be ignored
+[ 2313.274837] new mount options do not match the existing superblock, will be ignored
+[ 2314.246943] new mount options do not match the existing superblock, will be ignored
+[ 2314.258993] new mount options do not match the existing superblock, will be ignored
+[ 2314.362706] new mount options do not match the existing superblock, will be ignored
+[ 2314.448081] new mount options do not match the existing superblock, will be ignored
+[ 2314.531990] new mount options do not match the existing superblock, will be ignored
+[ 2358.412362] kernel write not supported for file [eventfd] (pid: 5003 comm: kworker/1:0)
+[ 2358.424995] kernel write not supported for file [eventfd] (pid: 5003 comm: kworker/1:0)
+[ 2358.534436] kernel write not supported for file [eventfd] (pid: 5003 comm: kworker/1:0)
+[ 2358.618871] kernel write not supported for file [eventfd] (pid: 5003 comm: kworker/1:0)
+[ 2358.720811] kernel write not supported for file [eventfd] (pid: 5003 comm: kworker/1:0)
+[ 2360.445643] new mount options do not match the existing superblock, will be ignored
+[ 2360.450855] new mount options do not match the existing superblock, will be ignored
+[ 2360.536062] new mount options do not match the existing superblock, will be ignored
+[ 2360.675229] new mount options do not match the existing superblock, will be ignored
+[ 2360.781362] new mount options do not match the existing superblock, will be ignored
+[ 2361.363878] tmpfs: Bad value for 'mpol'
+[ 2361.449256] tmpfs: Bad value for 'mpol'
+[ 2361.541658] tmpfs: Bad value for 'mpol'
+[ 2361.620717] tmpfs: Bad value for 'mpol'
+[ 2369.929856] tmpfs: Bad value for 'mpol'
+[ 2370.040572] tmpfs: Bad value for 'mpol'
+[ 2370.140295] tmpfs: Bad value for 'mpol'
+[ 2370.225406] tmpfs: Bad value for 'mpol'
+[ 2396.141691] tmpfs: Bad value for 'huge'
+[ 2396.236514] tmpfs: Bad value for 'huge'
+[ 2396.318106] tmpfs: Bad value for 'huge'
+[ 2396.414060] tmpfs: Bad value for 'huge'
+[ 2397.780050] tmpfs: Bad value for 'mpol'
+[ 2397.864777] tmpfs: Bad value for 'mpol'
+[ 2397.944266] tmpfs: Bad value for 'mpol'
+[ 2398.036166] tmpfs: Bad value for 'mpol'
+[ 2399.410001] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[ 2399.526103] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[ 2399.619282] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[ 2399.731930] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[ 2419.803103] SELinux:  duplicate or incompatible mount options
+[ 2419.901957] SELinux:  duplicate or incompatible mount options
+[ 2419.986774] SELinux:  duplicate or incompatible mount options
+[ 2420.071375] SELinux:  duplicate or incompatible mount options
+[ 2421.817522] kernel write not supported for file [eventfd] (pid: 28489 comm: kworker/0:3)
+[ 2421.911206] kernel write not supported for file [eventfd] (pid: 5003 comm: kworker/1:0)
+[ 2421.988653] kernel write not supported for file [eventfd] (pid: 5003 comm: kworker/1:0)
+[ 2422.113969] kernel write not supported for file [eventfd] (pid: 5003 comm: kworker/1:0)
+[ 2423.634386] Process accounting resumed
+[ 2423.658706] Process accounting resumed
+[ 2423.756515] Process accounting resumed
+[ 2423.854075] Process accounting resumed
+[ 2423.958946] Process accounting resumed
+[ 2450.011043] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2450.029867] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2450.768907] new mount options do not match the existing superblock, will be ignored
+[ 2450.774032] new mount options do not match the existing superblock, will be ignored
+[ 2450.866058] new mount options do not match the existing superblock, will be ignored
+[ 2450.953596] new mount options do not match the existing superblock, will be ignored
+[ 2451.041200] new mount options do not match the existing superblock, will be ignored
+[ 2460.096295] new mount options do not match the existing superblock, will be ignored
+[ 2460.106908] new mount options do not match the existing superblock, will be ignored
+[ 2460.208485] new mount options do not match the existing superblock, will be ignored
+[ 2460.300305] new mount options do not match the existing superblock, will be ignored
+[ 2460.394481] new mount options do not match the existing superblock, will be ignored
+[ 2465.122428] new mount options do not match the existing superblock, will be ignored
+[ 2468.367251] new mount options do not match the existing superblock, will be ignored
+[ 2468.374012] new mount options do not match the existing superblock, will be ignored
+[ 2474.263152] nfs4: Bad value for 'source'
+[ 2486.912229] new mount options do not match the existing superblock, will be ignored
+[ 2539.975467] cgroup: Unknown subsys name 'perf_event'
+[ 2539.977414] cgroup: Unknown subsys name 'net_cls'
+[ 2545.265360] Option '8\xffffffc7< \xffffffa4@\xffffffc6\xffffffb8\O\xffffffafS1x\xffffffde\xffffff99\xfffffff9\xffffffaa\xffffffef\xffffffdb\xffffffa6\xffffffddI^l\xffffffdc' to dns_resolver key: bad/missing value
+[ 2545.270551] Option '8\xffffffc7< \xffffffa4@\xffffffc6\xffffffb8\O\xffffffafS1x\xffffffde\xffffff99\xfffffff9\xffffffaa\xffffffef\xffffffdb\xffffffa6\xffffffddI^l\xffffffdc' to dns_resolver key: bad/missing value
+[ 2550.418961] tmpfs: Unknown parameter 'no\xfffffff5'
+[ 2558.719286] rpc_pipefs: Unknown parameter 'nfs'
+[ 2558.837117] kernel write not supported for file [eventfd] (pid: 6462 comm: kworker/1:3)
+[ 2558.845914] kernel write not supported for file [eventfd] (pid: 28489 comm: kworker/0:3)
+[ 2558.931046] kernel write not supported for file [eventfd] (pid: 28489 comm: kworker/0:3)
+[ 2559.008027] kernel write not supported for file [eventfd] (pid: 28489 comm: kworker/0:3)
+[ 2559.090213] kernel write not supported for file [eventfd] (pid: 28489 comm: kworker/0:3)
+[ 2561.567514] tmpfs: Unknown parameter '{*o/!'
+[ 2565.076930] SELinux:  duplicate or incompatible mount options
+[ 2566.225947] SELinux:  duplicate or incompatible mount options
+[ 2567.365849] SELinux:  duplicate or incompatible mount options
+[ 2568.484563] SELinux:  duplicate or incompatible mount options
+[ 2568.892507] SELinux:  duplicate or incompatible mount options
+[ 2568.902785] SELinux:  duplicate or incompatible mount options
+[ 2569.446283] new mount options do not match the existing superblock, will be ignored
+[ 2569.533787] new mount options do not match the existing superblock, will be ignored
+[ 2569.621233] new mount options do not match the existing superblock, will be ignored
+[ 2569.731800] new mount options do not match the existing superblock, will be ignored
+[ 2571.972173] 9pnet: Insufficient options for proto=fd
+[ 2575.888767] SELinux:  duplicate or incompatible mount options
+[ 2577.980893] SELinux:  duplicate or incompatible mount options
+[ 2579.054123] SELinux:  duplicate or incompatible mount options
+[ 2580.151381] SELinux:  duplicate or incompatible mount options
+[ 2582.584391] tmpfs: Bad value for 'mpol'
+[ 2602.974962] new mount options do not match the existing superblock, will be ignored
+[ 2602.978776] new mount options do not match the existing superblock, will be ignored
+[ 2610.940405] autofs4:pid:9078:autofs_fill_super: called with bogus options
+[ 2613.023467] 9pnet: p9_fd_create_unix (9131): problem connecting socket: ./file1: -2
+[ 2618.448461] 9pnet: p9_fd_create_tcp (9197): problem connecting socket to 127.0.0.1
+[ 2623.013020] new mount options do not match the existing superblock, will be ignored
+[ 2623.015443] new mount options do not match the existing superblock, will be ignored
+-------
+
+07/21/21 01:40:01
+[ 2674.428708] cgroup: Unknown subsys name 'perf_event'
+[ 2674.430935] cgroup: Unknown subsys name 'net_cls'
+[ 2676.033915] Process accounting resumed
+[ 2676.056071] Process accounting resumed
+[ 2676.067242] syz-executor (9757) used greatest stack depth: 25120 bytes left
+[ 2676.182200] Process accounting resumed
+[ 2676.284184] Process accounting resumed
+[ 2676.373207] Process accounting resumed
+[ 2676.999853] 9pnet: p9_fd_create_tcp (9780): problem connecting socket to 127.0.0.1
+[ 2677.109927] 9pnet: p9_fd_create_tcp (9782): problem connecting socket to 127.0.0.1
+[ 2677.192626] 9pnet: p9_fd_create_tcp (9784): problem connecting socket to 127.0.0.1
+[ 2677.304056] 9pnet: p9_fd_create_tcp (9786): problem connecting socket to 127.0.0.1
+[ 2678.319383] new mount options do not match the existing superblock, will be ignored
+[ 2678.327873] new mount options do not match the existing superblock, will be ignored
+[ 2678.521402] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2678.538891] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2688.009236] tmpfs: Bad value for 'huge'
+[ 2692.525471] tmpfs: Bad value for 'mpol'
+[ 2693.773841] kernel write not supported for file [eventfd] (pid: 28489 comm: kworker/0:3)
+[ 2703.738040] new mount options do not match the existing superblock, will be ignored
+[ 2703.741920] cgroup: Unknown subsys name 'trans'
+[ 2703.745454] new mount options do not match the existing superblock, will be ignored
+[ 2703.746767] cgroup: Unknown subsys name 'trans'
+[ 2703.830057] EXT4-fs (sda): re-mounted. Opts: . Quota mode: none.
+[ 2703.835386] EXT4-fs (sda): re-mounted. Opts: . Quota mode: none.
+[ 2703.880288] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2703.903148] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2704.036199] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2704.142392] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2704.263180] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2704.356589] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2704.449571] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2704.530570] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 2709.451231] new mount options do not match the existing superblock, will be ignored
+[ 2722.026778] tmpfs: Bad value for 'mpol'
+[ 2722.349002] SELinux:  duplicate or incompatible mount options
+[ 2731.516609] SELinux:  duplicate or incompatible mount options
+[ 2732.947638] Process accounting resumed
+[ 2734.366750] 9pnet: p9_fd_create_unix (10751): problem connecting socket: ./file0/../file0: -111
+[ 2734.372020] 9pnet: p9_fd_create_unix (10752): problem connecting socket: ./file0/../file0: -111
+[ 2734.490899] tmpfs: Bad value for 'mpol'
+[ 2759.378497] cgroup: Unknown subsys name 'perf_event'
+[ 2759.381499] cgroup: Unknown subsys name 'net_cls'
+[ 2766.273867] tmpfs: Bad value for 'huge'
+[ 2775.166301] tmpfs: Unsupported parameter 'huge'
+[ 2775.632939] new mount options do not match the existing superblock, will be ignored
+[ 2775.636201] new mount options do not match the existing superblock, will be ignored
+[ 2778.174221] tmpfs: Bad value for 'mpol'
+[ 2778.325615] new mount options do not match the existing superblock, will be ignored
+[ 2788.401537] 9pnet: Unknown protocol version 9
+[ 2788.406149] 9pnet: Unknown protocol version 9
+[ 2791.463045] SELinux:  duplicate or incompatible mount options
+[ 2794.965054] 9pnet: Unknown protocol version 9
+[ 2799.121885] tmpfs: Bad value for 'mpol'
+[ 2799.272913] SELinux: security_context_str_to_sid(staff_u) failed for (dev tracefs, type tracefs) errno=-22
+[ 2799.276725] SELinux: security_context_str_to_sid(staff_u) failed for (dev tracefs, type tracefs) errno=-22
+[ 2800.093982] SELinux: security_context_str_to_sid(user_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[ 2806.794301] 9pnet: Insufficient options for proto=fd
+[ 2817.190943] new mount options do not match the existing superblock, will be ignored
+[ 2817.193454] new mount options do not match the existing superblock, will be ignored
+[ 2817.276336] 9pnet: Insufficient options for proto=fd
+[ 2817.564955] tmpfs: Unknown parameter 'n'
+[ 2823.298640] tmpfs: Bad value for 'mpol'
+[ 2823.305468] tmpfs: Bad value for 'mpol'
+[ 2823.456440] new mount options do not match the existing superblock, will be ignored
+[ 2823.463334] new mount options do not match the existing superblock, will be ignored
+[ 2823.848562] new mount options do not match the existing superblock, will be ignored
+[ 2823.850587] new mount options do not match the existing superblock, will be ignored
+[ 2828.180708] tmpfs: Bad value for 'mpol'
+[ 2829.944492] SELinux: security_context_str_to_sid(system_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[ 2830.597630] new mount options do not match the existing superblock, will be ignored
+[ 2830.601417] new mount options do not match the existing superblock, will be ignored
+[ 2830.686526] new mount options do not match the existing superblock, will be ignored
+[ 2830.766143] new mount options do not match the existing superblock, will be ignored
+[ 2830.845104] new mount options do not match the existing superblock, will be ignored
+[ 2834.566699] tmpfs: Bad value for 'mpol'
+[ 2853.570932] tmpfs: Bad value for 'mode'
+[ 2860.429559] new mount options do not match the existing superblock, will be ignored
+[ 2860.437237] new mount options do not match the existing superblock, will be ignored
+[ 2871.376183] new mount options do not match the existing superblock, will be ignored
+[ 2871.382339] new mount options do not match the existing superblock, will be ignored
+[ 2875.779966] new mount options do not match the existing superblock, will be ignored
+[ 2875.782281] new mount options do not match the existing superblock, will be ignored
+[ 2875.872300] new mount options do not match the existing superblock, will be ignored
+[ 2875.876109] new mount options do not match the existing superblock, will be ignored
+[ 2882.618317] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[ 2886.761334] tmpfs: Bad value for 'nr_inodes'
+[ 2938.888891] cgroup: Unknown subsys name 'perf_event'
+[ 2938.891155] cgroup: Unknown subsys name 'net_cls'
+[ 2940.638966] 9pnet: Insufficient options for proto=fd
+[ 2941.167137] kernel write not supported for file [eventfd] (pid: 10562 comm: kworker/1:1)
+[ 2941.170850] kernel write not supported for file [eventfd] (pid: 10562 comm: kworker/1:1)
+[ 2941.383022] Process accounting resumed
+[ 2941.395806] Process accounting resumed
+[ 2942.851031] tmpfs: Bad value for 'mode'
+[ 2948.238981] new mount options do not match the existing superblock, will be ignored
+[ 2948.243448] new mount options do not match the existing superblock, will be ignored
+[ 2999.534535] cgroup: Unknown subsys name 'perf_event'
+[ 2999.536472] cgroup: Unknown subsys name 'net_cls'
+[ 3009.174034] new mount options do not match the existing superblock, will be ignored
+[ 3009.179383] new mount options do not match the existing superblock, will be ignored
+[ 3009.468647] tmpfs: Unknown parameter 'trans'
+[ 3009.471071] tmpfs: Unknown parameter 'trans'
+[ 3014.778043] 9pnet: Could not find request transport: f
+[ 3014.791040] 9pnet: Could not find request transport: f
+[ 3014.886814] 9pnet: Could not find request transport: f
+[ 3015.003496] 9pnet: Could not find request transport: f
+[ 3015.115169] 9pnet: Could not find request transport: f
+[ 3015.936297] tmpfs: Bad value for 'mpol'
+[ 3016.213205] devpts: called with bogus options
+[ 3016.330167] devpts: called with bogus options
+[ 3016.416664] devpts: called with bogus options
+[ 3016.530133] devpts: called with bogus options
+[ 3019.789014] new mount options do not match the existing superblock, will be ignored
+[ 3019.796139] new mount options do not match the existing superblock, will be ignored
+[ 3019.884962] new mount options do not match the existing superblock, will be ignored
+[ 3020.003171] new mount options do not match the existing superblock, will be ignored
+[ 3020.091366] new mount options do not match the existing superblock, will be ignored
+[ 3020.334206] 9pnet: Insufficient options for proto=fd
+[ 3021.473440] tmpfs: Bad value for 'mpol'
+[ 3032.317781] tmpfs: Bad value for 'uid'
+[ 3037.167917] tmpfs: Bad value for 'mpol'
+[ 3044.615031] tmpfs: Bad value for 'mpol'
+[ 3047.978352] new mount options do not match the existing superblock, will be ignored
+[ 3047.981553] new mount options do not match the existing superblock, will be ignored
+[ 3048.665847] tmpfs: Bad value for 'mpol'
+[ 3048.898975] Module has invalid ELF structures
+[ 3048.902544] Module has invalid ELF structures
+[ 3048.981869] Module has invalid ELF structures
+[ 3049.048481] Module has invalid ELF structures
+[ 3049.136516] Module has invalid ELF structures
+[ 3056.717278] kernel read not supported for file inotify (pid: 12239 comm: kworker/0:1)
+[ 3105.763457] cgroup: Unknown subsys name 'perf_event'
+[ 3105.765089] cgroup: Unknown subsys name 'net_cls'
+[ 3107.188887] tmpfs: Bad value for 'mpol'
+[ 3107.349706] tmpfs: Bad value for 'mpol'
+[ 3110.082592] tmpfs: Bad value for 'mpol'
+[ 3126.624387] new mount options do not match the existing superblock, will be ignored
+[ 3126.626484] new mount options do not match the existing superblock, will be ignored
+[ 3142.453869] tmpfs: Bad value for 'mpol'
+[ 3145.414936] tmpfs: Bad value for 'mpol'
+[ 3145.751629] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 3145.774252] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 3145.885024] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 3145.970860] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 3146.060087] EXT4-fs (sda): re-mounted. Opts: (null). Quota mode: none.
+[ 3148.137673] new mount options do not match the existing superblock, will be ignored
+[ 3148.507505] SELinux:  duplicate or incompatible mount options
+[ 3150.965503] nfs: Unknown parameter 'security.apparmor'
+[ 3151.798097] new mount options do not match the existing superblock, will be ignored
+[ 3151.800272] option changes via remount are deprecated (pid=16143 comm=syz-executor)
+[ 3151.808441] option changes via remount are deprecated (pid=16143 comm=syz-executor)
+[ 3151.809900] new mount options do not match the existing superblock, will be ignored
+-------
+
+07/21/21 20:00:01
+[ 3325.631203] new mount options do not match the existing superblock, will be ignored
+[ 3325.633471] new mount options do not match the existing superblock, will be ignored
+[ 3335.428691] 9pnet: Insufficient options for proto=fd
+[ 3338.116931] new mount options do not match the existing superblock, will be ignored
+[ 3338.121984] new mount options do not match the existing superblock, will be ignored
+[ 3347.365270] tmpfs: Bad value for 'mpol'
+[ 3348.494250] 9pnet: Insufficient options for proto=fd
+[ 3348.503585] 9pnet: Insufficient options for proto=fd
+[ 3349.508426] autofs4:pid:19162:autofs_fill_super: called with bogus options
+[ 3357.242341] new mount options do not match the existing superblock, will be ignored
+[ 3357.246041] new mount options do not match the existing superblock, will be ignored
+[ 3360.588923] tmpfs: Bad value for 'mpol'
+[ 3366.643976] new mount options do not match the existing superblock, will be ignored
+[ 3366.648955] new mount options do not match the existing superblock, will be ignored
+[ 3366.740429] new mount options do not match the existing superblock, will be ignored
+[ 3366.866491] new mount options do not match the existing superblock, will be ignored
+[ 3366.956093] new mount options do not match the existing superblock, will be ignored
+[ 3368.203291] Process accounting resumed
+[ 3394.401391] tmpfs: Bad value for 'mpol'
+[ 3397.741371] SELinux: security_context_str_to_sid(sysadm_u) failed for (dev tmpfs, type tmpfs) errno=-22
+[ 3398.003935] 9pnet: Could not find request transport: fd\xffffffbc\xffffffdd\xffffffa2C\xffffff97\xffffffed\xffffff86\xffffff8f\xffffff90\xffffff97^\xfffffff0\xffffffaa@T\xffffffc3|\xffffffc6dX{YC\xffffff96\xffffffaa
+
+[ 3398.111561] tmpfs: Bad value for 'size'
+[ 3400.380065] new mount options do not match the existing superblock, will be ignored
+[ 3400.383198] new mount options do not match the existing superblock, will be ignored
+[ 3403.171767] kernel write not supported for file [eventfd] (pid: 10562 comm: kworker/1:1)
+[ 3408.775305] autofs4:pid:19903:autofs_fill_super: called with bogus options
+[ 3419.829308] Module has invalid ELF structures
+[ 3419.832420] Module has invalid ELF structures
+[ 3420.748841] 9pnet: p9_fd_create_tcp (20077): problem connecting socket to 127.0.0.1
+[ 3420.875071] 9pnet: p9_fd_create_tcp (20079): problem connecting socket to 127.0.0.1
+[ 3420.978311] 9pnet: p9_fd_create_tcp (20081): problem connecting socket to 127.0.0.1
+[ 3421.080912] 9pnet: p9_fd_create_tcp (20083): problem connecting socket to 127.0.0.1
+[ 3428.995664] nfs4: Unknown parameter 'security.apparmor'
+[ 3429.001849] nfs4: Unknown parameter 'security.apparmor'
+[ 3429.091193] kernel write not supported for file [eventfd] (pid: 13188 comm: kworker/1:2)
+[ 3429.109293] kernel write not supported for file [eventfd] (pid: 13188 comm: kworker/1:2)
+[ 3436.731001] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev sda, type ext4) errno=-22
+[ 3436.738170] SELinux: security_context_str_to_sid(unconfined_u) failed for (dev sda, type ext4) errno=-22
+[ 3440.508521] SELinux:  duplicate or incompatible mount options
+[ 3441.112041] tmpfs: Bad value for 'mpol'
+[ 3442.742617] new mount options do not match the existing superblock, will be ignored
+[ 3442.745585] new mount options do not match the existing superblock, will be ignored
+[ 3444.666606] tmpfs: Unknown parameter '\xffffffaeFn'
+[ 3610.106200] tmpfs: Bad value for 'mpol'
+[ 3610.112014] tmpfs: Bad value for 'mpol'

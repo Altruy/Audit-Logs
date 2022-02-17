@@ -1,0 +1,4 @@
+#!/bin/bash
+TIM=$(date +"%H:%M:%S")
+echo 0 > /sys/kernel/debug/tracing/tracing_on
+cat /sys/kernel/debug/tracing/trace > /root/trace_output_$TIM

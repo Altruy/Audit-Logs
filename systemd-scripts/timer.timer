@@ -1,0 +1,8 @@
+[Unit]
+Description=timer for ftrace timer
+
+[Timer]
+OnBootSec=2h
+
+[Install]
+WantedBy=timers.target
