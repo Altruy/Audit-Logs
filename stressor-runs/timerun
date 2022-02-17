@@ -1,0 +1,5 @@
+start=`date +%s.%N`
+./a.out
+end=`date +%s.%N`
+runtime=$( echo "$end - $start" | bc -l )
+echo $1 : $runtime >> outtime.txt

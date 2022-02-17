@@ -1,0 +1,95 @@
+echo "Test#1 cpu 10 , i/o 10" >> output.txt
+touch file1.txt
+./timerun test1 &
+stress-ng -c 10 -i 10 --vm-bytes 128M -t 20m
+cat /var/log/audit/audit.log | grep -c syscall=82 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=162 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=39 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=186 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=41 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=3 >> output.txt
+echo > /var/log/audit/audit.log
+echo >> output.txt
+echo ----------- >> output.txt
+echo >> output.txt
+echo "Test 1 done"
+
+echo "Test#2 cpu 10 , socket 5" >> output.txt
+touch file1.txt
+./timerun test2 &
+stress-ng -c 10 -S 5 --vm-bytes 128M -t 20m
+cat /var/log/audit/audit.log | grep -c syscall=82 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=162 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=39 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=186 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=41 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=3 >> output.txt
+echo > /var/log/audit/audit.log
+echo >> output.txt
+echo ----------- >> output.txt
+echo >> output.txt
+echo "Test 2 done"
+
+echo "Test#3 socket 5 , i/o 10" >> output.txt
+touch file1.txt
+./timerun test3 &
+stress-ng -S 5 -i 10 -t 20m
+cat /var/log/audit/audit.log | grep -c syscall=82 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=162 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=39 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=186 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=41 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=3 >> output.txt
+echo > /var/log/audit/audit.log
+echo >> output.txt
+echo ----------- >> output.txt
+echo >> output.txt
+echo "Test 3 done"
+
+echo "Test#4 socket 5 , disk 2" >> output.txt
+touch file1.txt
+./timerun test4 &
+stress-ng -S 5 -d 2 -t 20m
+cat /var/log/audit/audit.log | grep -c syscall=82 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=162 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=39 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=186 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=41 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=3 >> output.txt
+echo > /var/log/audit/audit.log
+echo >> output.txt
+echo ----------- >> output.txt
+echo >> output.txt
+echo "Test 4 done"
+
+echo "Test#5 i/o 10 , disk 2" >> output.txt
+touch file1.txt
+./timerun test5 &
+stress-ng -c 10 -d 2 -t 20m
+cat /var/log/audit/audit.log | grep -c syscall=82 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=162 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=39 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=186 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=41 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=3 >> output.txt
+echo > /var/log/audit/audit.log
+echo >> output.txt
+echo ----------- >> output.txt
+echo >> output.txt
+echo "Test 5 done"
+
+echo "Test#6 cpu 10 , disk 2" >> output.txt
+touch file1.txt
+./timerun test6 &
+stress-ng -c 10 -d 2 -t 20m
+cat /var/log/audit/audit.log | grep -c syscall=82 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=162 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=39 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=186 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=41 >> output.txt
+cat /var/log/audit/audit.log | grep -c syscall=3 >> output.txt
+echo > /var/log/audit/audit.log
+echo >> output.txt
+echo ----------- >> output.txt
+echo >> output.txt
+echo "Test 6 done"
