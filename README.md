@@ -9,3 +9,4 @@ We make use of tracing and stressing tools like ftrace, perf, stress / stress-ng
 #### This Repo contains
 - The scripts and codes we wrote to gather, clean and analyse data
 - The post-processed and semi-processed logs
+- The C programs to replicate
